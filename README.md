@@ -1,2 +1,99 @@
-# EcoEat-JetpackCompose
-Proyecto tutorial para crear una aplicación de comida ecológica utilizando Android Studio, Jetpack Compose y Kotlin. Este proyecto tiene un enfoque educativo, mostrando paso a paso cómo diseñar interfaces modernas, implementar navegación, manejar datos y aplicar buenas prácticas en desarrollo Android nativo.
+# 🌱 Proyecto Jetpack Compose: EcoEat
+
+¡Bienvenido! 🚀  
+En este proyecto vamos a **explorar juntos Jetpack Compose**, la nueva forma declarativa de crear interfaces en Android y otras plataformas. La idea es aprender desde cero, **diseño hasta implementación**, e incluso introducir patrones de arquitectura mientras desarrollamos una app real de comida saludable: **EcoEat** 🍃🥗.
+
+> Este proyecto es ideal tanto si vienes de Android clásico (XML) 📄 como si nunca has trabajado con Android 😅.
+
+---
+
+### 🎯 Objetivos personales
+
+- Este proyecto tiene un propósito doble: aprender y enseñar.
+  Durante el desarrollo de EcoEat-JetpackCompose, iré explorando paso a paso las tecnologías modernas de Android: Kotlin, Jetpack Compose y las buenas prácticas de arquitectura.
+
+- Mi meta es aprender desde la práctica y, al mismo tiempo, compartir lo aprendido con otras personas que también están empezando o desean reforzar sus conocimientos en desarrollo Android nativo.
+
+- Quiero que este proyecto sea un recorrido compartido, donde avancemos juntos — descubriendo, equivocándonos, corrigiendo y mejorando el código día a día 💡📱
+
+En resumen:
+
+> 🌱 Aprendo mientras enseño, y enseño mientras aprendo.
+
+---
+
+## 🎯 Objetivos del proyecto
+
+- Conocer las bases de **Jetpack Compose** 💻.
+- Implementar interfaces de manera **declarativa y moderna**.
+- Aprender a integrar Kotlin como lenguaje principal ☕.
+- Introducir conceptos de arquitectura y buenas prácticas 🧱.
+- Ser capaz de crear cualquier aplicación usando estas tecnologías 📱.
+
+---
+
+## 📚 ¿Por qué Jetpack Compose?
+
+- Compose no es el futuro, **es el presente** de Android 🚀.
+- Entre el 10% y 15% de las apps en Play Store ya usan Compose 📊.
+- Declarativo: define tu UI como funciones de Kotlin `@Composable` 🧩.
+- Multiplataforma: ya es usable en Android, Desktop 💻, Web 🌐 y wearables ⌚.
+- Interoperable: se puede combinar con XML y Java sin problemas 🔗.
+- Kotlin es expresivo, conciso y seguro (null safety) 🛡️.
+
+---
+
+## 💡 Por qué Kotlin
+
+- Lenguaje oficial de Android ✅, moderno y conciso ✂️.
+- Código seguro (null safety) 🔒 para evitar crashes.
+- Interoperable 100% con Java ☕.
+- Permite enfocarnos en **resolver problemas** más que en escribir líneas de código 🖊️.
+
+---
+
+## 🚀 Qué haremos con Jetpack Compose
+
+- Crear interfaces declarativas 🎨.
+- Diseñar UI para móvil, escritorio, web y wearables 🌍.
+- Explorar Kotlin Multiplatform (KMP) ⚙️ para compartir lógica entre plataformas.
+- Preparar proyectos escalables y fáciles de mantener 🧱.
+
+---
+
+## Índice de capítulos 📖
+
+1. [Bienvenido](docs/01-Introduccion.md) 📝 – Bienvenida al curso crea tu app EcoEat desde cero aprendiendo Jetpack Compose en Android Studio. 🤖
+2. Próximamente: **...**
+
+> Cada capítulo se construirá de forma progresiva, combinando **teoría, ejemplos y ejercicios prácticos**.
+
+---
+
+## Estructura inicial de carpetas 📂
+
+```text
+EcoEat-JetpackCompose/
+├── README.md                  ← Este archivo
+├── docs/
+│   ├── 01-bienvenido.md       ← Capítulo 1: documentación introductoria
+│   └── assets/                ← Imágenes relacionadas con los capítulos
+├── src/                       ← Código
+├── ejemplos/                  ← Ejemplos de conceptos
+├── ejercicios/                ← Ejercicios y mini-proyectos por tema
+└── recursos/                  ← Enlaces, referencias y tutoriales externos
+```
+
+---
+
+## 📌 Recursos y comunidad
+
+- [Android Studio](https://developer.android.com/) 💻
+- [Material Design 3](https://m3.material.io/) 🎨
+- Figma para diseño de UI: [EcoEat Design](https://www.figma.com/design/bYELfMsS5BfF6pbqD7F6SW/ECOEats?node-id=0-1) 🧩
+- Me inspiro en los directos y el estilo divulgativo de **@jotadevandroid**, cuya forma de enseñar y compartir conocimientos motiva a aprender de manera práctica y cercana 🤝
+- Utilizo todas las herramientas y recursos disponibles en la web para investigar, aprender y mantenerme actualizado 🌐
+
+---
+
+> Este proyecto servirá como **laboratorio práctico** para aprender Jetpack Compose, Kotlin y desarrollo nativo Android mientras construimos algo real y aplicable 🌱📱.
