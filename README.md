@@ -7,6 +7,28 @@ En este proyecto vamos a **explorar juntos Jetpack Compose**, la nueva forma dec
 
 ---
 
+## 🧭 Índice general
+
+### [1. Introducción a JetPack Compose](docs/01-Introduccion.md)
+
+    - [🚀 ¿Qué es Jetpack Compose?]
+    - [☕ Kotlin y desarrollo nativo]
+    - [🧩 Paradigmas: Imperativo vs Declarativo]
+    - [🎨 Qué es Material Design]
+    - [👨‍💻 Creando nuestro primer Composable: Hola Mundo]
+    - [📚 Recursos del capítulo]
+
+### 🧱 Capítulo 2 - Estructuras básicas de UI (en desarrollo)
+
+    - [📐 Column, Row y Box: los contenedores mágicos]
+    - [🎨 Cómo alinear, espaciar y distribuir elementos]
+    - [🖼️ Insertando imágenes y textos]
+    - [🔘 Botones e interacción básica]
+    - [🧩 Ejercicios prácticos con Previews]
+    - [📱 Previews en formato teléfono]
+
+---
+
 ### 🎯 Objetivos personales
 
 - Este proyecto tiene un propósito doble: aprender y enseñar.
@@ -58,15 +80,6 @@ En resumen:
 - Diseñar UI para móvil, escritorio, web y wearables 🌍.
 - Explorar Kotlin Multiplatform (KMP) ⚙️ para compartir lógica entre plataformas.
 - Preparar proyectos escalables y fáciles de mantener 🧱.
-
----
-
-## Índice de capítulos 📖
-
-1. [Bienvenido](docs/01-Introduccion.md) 📝 – Bienvenida al curso crea tu app EcoEat desde cero aprendiendo Jetpack Compose en Android Studio. 🤖
-2. Próximamente: **...**
-
-> Cada capítulo se construirá de forma progresiva, combinando **teoría, ejemplos y ejercicios prácticos**.
 
 ---
 
