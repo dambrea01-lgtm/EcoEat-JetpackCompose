@@ -1,7 +1,14 @@
-# 🚀 Introducción Jetpack Compose - EcoEat
+# 🚀 Capitulo 1: Introducción Jetpack Compose - EcoEat
 
 | [↩️ Volver al inicio del Proyecto](../README.md) | [➡️ Capítulo 2](../docs/02-contenedores) |
 | :----------------------------------------------: | :--------------------------------------: |
+
+---
+
+Bienvenido al primer capítulo del curso de **Jetpack Compose** 💻.  
+En esta sección sentaremos las bases del desarrollo moderno en Android, aprendiendo **qué es Jetpack Compose**, por qué es tan importante hoy en día y cómo se diferencia del enfoque clásico con XML.  
+Además, exploraremos conceptos clave como **Kotlin Multiplatform (KMP)**, **Material Design**, y los **paradigmas declarativo e imperativo**, para entender cómo pensar en Compose desde cero.  
+Terminaremos creando nuestro **primer Composable “Hola Mundo” 👋**, el punto de partida para todas nuestras futuras interfaces.
 
 ---
 
@@ -466,5 +473,5 @@ Además, haremos **una batería de ejercicios prácticos** para reforzar estos c
 
 ---
 
-| [↩️ Volver al inicio del Proyecto](../README.md) | [➡️ Capítulo 2](../docs/02-contenedores) |
-| :----------------------------------------------: | :--------------------------------------: |
+| [↩️ Volver al inicio del proyecto](../README.md) | [⬆️ Ir al inicio del capítulo](#-capitulo-1-introducción-jetpack-compose---ecoeat) | [➡️ Ir al Capítulo 2](../docs/02-contenedores.md) |
+| :----------------------------------------------: | :--------------------------------------------------------------------------------: | :------------------------------------------------ |
