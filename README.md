@@ -28,10 +28,12 @@ En este proyecto vamos a **explorar juntos Jetpack Compose**, la nueva forma dec
   - [📚 Recursos y enlaces útiles]
 ```
 
-### 🧱 Capítulo 2 - Estructuras básicas de UI (en desarrollo)
+### [2 - Estructuras básicas de UI (en desarrollo)](docs/02-contenedores.md)
 
 ```text
-    - [ desarrollando ]
+  - [ 📦 Creando nuestro primer proyecto Compose ]
+  - [ 🚀 Primer paso: entender la estructura base del proyecto ]
+  - [ desarrollando ]
 ```
 
 ---

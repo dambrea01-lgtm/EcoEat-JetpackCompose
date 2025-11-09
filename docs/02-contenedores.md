@@ -5,6 +5,8 @@
 
 ---
 
+---
+
 ## 📦 Creando nuestro primer proyecto Compose
 
 Antes de empezar a trabajar con los **contenedores** de Jetpack Compose 🧩 —como `Column`, `Row` y `Box`— necesitamos crear nuestro **proyecto base** en Android Studio 💻.
@@ -166,6 +168,87 @@ Vamos a empezar desde cero. No quiero que nos confundamos. Tu archivo debe queda
 👉 Solamente un setContent { } vacío.
 
 ![punto de partida solo setContent](assets/capitulo-02/img-11.png)
+
+---
+
+## 🎨 Creando tu primer Composable y Preview
+
+Ahora vamos a empezar a pintar algo en pantalla. En **Jetpack Compose**, todo lo que ves en la UI se construye con funciones Composable. Nosotros le decimos a Compose qué mostrar, y Compose se encarga de cómo dibujarlo.
+
+- 1️⃣ **Declarando una función Composable 🤔**
+
+Crear un Composable es muy sencillo. Solo necesitas usar la palabra clave **@Composable** antes de tu función.
+
+```kotlin
+@Composable
+fun MyFirstComposable() {
+    Text(text = "Hola! Soy Brea developer")
+}
+```
+
+![codigo @Composable de saludo](assets/capitulo-02/img-12.png)
+
+💡 Explicación:
+**@Composable** indica que esta función dibuja algo en la UI.
+**Text** es un composable predefinido que muestra texto. Si ponemos el cursor sobre Text veremos como indica que Text es un composable.
+
+![text composable](assets/capitulo-02/img-14.png)
+
+**text = "Hola! Soy Brea"** define el contenido que se verá en pantalla.
+
+> 💡 **Tip rápido**: En Android Studio, no necesitas escribir todo manualmente. Escribe comp y verás un shortcut para crear un Composable automáticamente. Presiona Enter ⏎ y se generará la estructura base. Solo asigna un nombre a tu función y agrega el contenido que quieras pintar.
+
+![tip comp](assets/capitulo-02/img-13.png)
+
+- 2️⃣ **Usando Preview 👁️‍🗨️**
+
+Como en XML podíamos ver un visor visual, en Compose usamos **@Preview** para previsualizar nuestro Composable en Android Studio.
+
+```kotlin
+@Preview(name = "My Preview")
+@Composable
+fun MyFirstComposablePreview(){
+    MyFirstComposable()
+}
+```
+
+**name = "My Preview"** es un atributo que nos da el nombre de la preview.
+
+**💡 ¿Qué es un atributo?**
+
+Un atributo es una propiedad o configuración que le damos a un elemento para que se comporte de cierta manera o tenga ciertas características. En XML, por ejemplo, un botón puede tener atributos como android:text="Hola" o android:background="#FF0000".
+En Compose, los atributos cumplen la misma función: definen cómo se verá o cómo se comportará un Composable.
+
+En resumen: los atributos son parámetros opcionales que modifican el comportamiento o la apariencia de un Composable.
+
+Dentro de fun Preview le decimos que funcion composable quieres mostrar. En nuestro caso le decimos MyFirstComposable()
+
+![primer preview](assets/capitulo-02/img-15.png)
+
+- **3️⃣ Visualizando la Preview en Android Studio**
+
+Dirígete a la parte superior derecha del editor 🧭
+
+Encontrarás las opciones:
+
+🧩 Code | Split | Design
+
+![split](assets/capitulo-02/img-16.png)
+
+Selecciona Split 🖥️ para ver mitad código, mitad preview. Luego le tienes que dar a refrescar y en unos segundos tenemos el preview listo.
+
+Verás el resultado de tu Composable: "Hola! Soy Brea developer"
+
+![preview](assets/capitulo-02/img-17.png)
+
+Podemos mejorar un poco la visualización de nuestra Preview, gracias a los atributos. Si añadimos los siguientes atributos:
+
+![agregando atributos a preview](assets/capitulo-02/img-18.png)
+
+- **showBackground** → si lo pones en true, te muestra un fondo blanco ⚪
+- **showSystemUi** → si lo pones en true, te muestra todo el dispositivo completo 📱
+
+![preview con nuevos atributos](assets/capitulo-02/img-19.png)
 
 ---
 
