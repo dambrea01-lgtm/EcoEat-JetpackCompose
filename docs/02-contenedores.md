@@ -80,7 +80,92 @@ Antes, Gradle usaba **Groovy DSL**, pero las versiones nuevas de Android Studio 
 
 ![configurando proyecto](assets/capitulo-02/img-02.png)
 
-Entonces seleccionamos **Kotlin DSL**, haz clic en **“Finalizar” 🏁**, y… ¡listo! Android Studio creará automáticamente tu proyecto Compose.
+Entonces seleccionamos **Kotlin DSL**, haz clic en **“Finalizar” 🏁**, y… ¡listo! Android Studio creará automáticamente tu proyecto Compose. Desde mi version de android studio (Android Studio Narwhal 3 Feature Drop | 2025.1.3) obtengo:
+
+![nuevo proyecto abierto](assets/capitulo-02/img-03.png)
+
+---
+
+## 🚀 Primer paso: entender la estructura base del proyecto
+
+Cada vez que creamos un proyecto nuevo en Android Studio, se genera una clase principal llamada MainActivity 📄.
+
+![main activity](assets/capitulo-02/img-04.png)
+
+Esta clase es el punto de partida de nuestra aplicación: es la primera pantalla por donde el sistema operativo Android ingresa cuando abrimos la app 🔑.
+
+📁 Estructura básica del proyecto
+
+En el panel izquierdo de Android Studio (explorador de archivos) verás varias carpetas.
+No analizaremos todas, pero sí las más importantes para esta sesión 👇:
+
+📦 Carpeta app
+
+Dentro de esta carpeta está todo el código de la aplicación.
+Ahí verás otras subcarpetas clave:
+
+1️⃣ manifests/
+
+Contiene el archivo AndroidManifest.xml 🧾
+
+![manifests](assets/capitulo-02/img-05.png)
+
+Aquí se declaran los permisos de la app (📷 cámara, 📍 geolocalización, 🌐 internet, etc.). También se puede definir el icono de la aplicación y otras configuraciones generales.
+
+👉 Por ahora, recuerda que aquí controlamos permisos y metadatos del proyecto.
+
+2️⃣ kotlin + java/
+
+![carpeta kotlin + java](assets/capitulo-02/img-06.png)
+
+Dentro verás tres carpetas:
+
+La principal, donde está el código de la app y dos carpetas adicionales para pruebas o testing 🧪 (las veremos más adelante)
+
+Cuando abres la carpeta principal (que tiene el nombre de tu paquete, por ejemplo com.midominio.miapp), verás los archivos del proyecto.Los más importantes por ahora son:
+
+![carpeta com.midominio.miapp](assets/capitulo-02/img-07.png)
+
+🧭 MainActivity.kt — el archivo donde inicia la app
+
+🎨 Carpeta ui/ — contiene los colores, temas y tipografías de la interfaz
+
+🎨 Dentro de la carpeta ui/
+
+Aquí configuramos todo el estilo visual de la aplicación: Colores del tema (modo claro 🌞 y modo oscuro 🌙); Tipografía que se usará; Configuraciones de Material Design 3, la guía moderna de diseño de Android
+
+**⚙️ La clase MainActivity.kt**
+
+Volviendo al archivo principal (**MainActivity.kt**), esta clase se ejecuta apenas abrimos la aplicación. Dentro de ella hay una función muy importante llamada:
+
+```kotlin
+override fun onCreate(savedInstanceState: Bundle?) {
+    super.onCreate(savedInstanceState)
+    setContent {
+        // Aquí va TODO el contenido visual de Jetpack Compose
+    }
+}
+```
+
+![funcion onCreate dentro de la clase MainActivity](assets/capitulo-02/img-08.png)
+
+📲 onCreate() se activa automáticamente al iniciar la app y muestra la primera pantalla
+
+🧩 Todo lo que creemos con **Jetpack Compose** se debe escribir dentro de la función **setContent { ... }**
+
+🔹 Aquí declararemos nuestras vistas, botones, textos, imágenes, etc.
+🔹 Si Android Studio genera un código de ejemplo (como un “Hello Android”), puedes borrarlo 🧹 para empezar desde cero con tu propia interfaz.
+
+![vaciamos el contenido del setContent](assets/capitulo-02/img-09.png)
+
+Y para finalizar borra tambien todo lo que selecciono en la imagen siguiente debajo de la clase MainActivity (todo el @Composable y la @Preview), luego explicaremos como crearlo nosotros mismo, y que significa.
+
+![borrando el @Composable y la @Preview](assets/capitulo-02/img-10.png)
+
+Vamos a empezar desde cero. No quiero que nos confundamos. Tu archivo debe quedar así:
+👉 Solamente un setContent { } vacío.
+
+![punto de partida solo setContent](assets/capitulo-02/img-11.png)
 
 ---
 

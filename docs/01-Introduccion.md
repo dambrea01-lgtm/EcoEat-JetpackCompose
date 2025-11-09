@@ -1,7 +1,7 @@
 # 🚀 Capitulo 1: Introducción Jetpack Compose - EcoEat
 
-| [↩️ Volver al inicio del Proyecto](../README.md) | [➡️ Capítulo 2](../docs/02-contenedores) |
-| :----------------------------------------------: | :--------------------------------------: |
+| [↩️ Volver al inicio del Proyecto](../README.md) | [➡️ Capítulo 2](../docs/02-contenedores.md) |
+| :----------------------------------------------: | :-----------------------------------------: |
 
 ---
 
