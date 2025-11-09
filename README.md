@@ -11,21 +11,28 @@ En este proyecto vamos a **explorar juntos Jetpack Compose**, la nueva forma dec
 
 ### [1. Introducción a JetPack Compose](docs/01-Introduccion.md)
 
-    - [🚀 ¿Qué es Jetpack Compose?]
-    - [☕ Kotlin y desarrollo nativo]
-    - [🧩 Paradigmas: Imperativo vs Declarativo]
-    - [🎨 Qué es Material Design]
-    - [👨‍💻 Creando nuestro primer Composable: Hola Mundo]
-    - [📚 Recursos del capítulo]
+```text
+  - [✨ Introducción]
+  - [☕ Kotlin y desarrollo nativo]
+  - [🧩 ¿Qué es Jetpack Compose?]
+  - [📱 Plataformas compatibles con Compose]
+  - [⚙️ Kotlin Multiplatform (KMP)]
+  - [🔬 Estado de desarrollo y versiones]
+  - [🔮 Futuro: Compose + Kotlin Multiplatform (KMP)]
+  - [⚖️ Flutter vs Kotlin Multiplatform]
+  - [🧩 Ktor: APIs en Kotlin]
+  - [🤔 Paradigmas de programación: Imperativo vs Declarativo]
+  - [🎨 ¿Qué es Material Design?]
+  - [👨‍💻 Creando nuestro primer Composable: Hola Mundo]
+  - [💭 Reflexión final]
+  - [📚 Recursos y enlaces útiles]
+```
 
 ### 🧱 Capítulo 2 - Estructuras básicas de UI (en desarrollo)
 
-    - [📐 Column, Row y Box: los contenedores mágicos]
-    - [🎨 Cómo alinear, espaciar y distribuir elementos]
-    - [🖼️ Insertando imágenes y textos]
-    - [🔘 Botones e interacción básica]
-    - [🧩 Ejercicios prácticos con Previews]
-    - [📱 Previews en formato teléfono]
+```text
+    - [ desarrollando ]
+```
 
 ---
 
@@ -89,7 +96,8 @@ En resumen:
 EcoEat-JetpackCompose/
 ├── README.md                  ← Este archivo
 ├── docs/
-│   ├── 01-bienvenido.md       ← Capítulo 1: documentación introductoria
+│   ├── 01-bienvenido.md       ← capitulos del tutorial
+│   ├── 02- (...)
 │   └── assets/                ← Imágenes relacionadas con los capítulos
 ├── src/                       ← Código
 ├── ejemplos/                  ← Ejemplos de conceptos
