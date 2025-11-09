@@ -33,6 +33,7 @@ En este proyecto vamos a **explorar juntos Jetpack Compose**, la nueva forma dec
 ```text
   - [ 📦 Creando nuestro primer proyecto Compose ]
   - [ 🚀 Primer paso: entender la estructura base del proyecto ]
+  - [ 🎨 Creando tu primer Composable y Preview ]
   - [ desarrollando ]
 ```
 

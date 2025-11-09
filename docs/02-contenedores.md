@@ -5,6 +5,14 @@
 
 ---
 
+# 🧱 Índice – Capítulo 2: Contenedores en Jetpack Compose
+
+| Sección                                                                                                            | Descripción                                                                    |
+| :----------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------- |
+| [📦 Creando nuestro primer proyecto Compose](#-creando-nuestro-primer-proyecto-compose)                            | Cómo crear un proyecto vacío en Android Studio listo para Jetpack Compose.     |
+| [🚀 Primer paso: entender la estructura base del proyecto](#-primer-paso-entender-la-estructura-base-del-proyecto) | Exploración de la estructura de carpetas, archivos clave y MainActivity.       |
+| [🎨 Creando tu primer Composable y Preview](#-creando-tu-primer-composable-y-preview)                              | Cómo declarar un Composable, usar `@Preview` y visualizarlo en Android Studio. |
+
 ---
 
 ## 📦 Creando nuestro primer proyecto Compose
