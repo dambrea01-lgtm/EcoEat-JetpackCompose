@@ -1,5 +1,9 @@
 # 🌱 Proyecto Jetpack Compose: EcoEat
 
+<p align="center">
+  <img src="recursos/banner.png" alt="Tutorial ABAP Cloud" width="1280"/>
+</p>
+
 ¡Bienvenido! 🚀  
 En este proyecto vamos a **explorar juntos Jetpack Compose**, la nueva forma declarativa de crear interfaces en Android y otras plataformas. La idea es aprender desde cero, **diseño hasta implementación**, e incluso introducir patrones de arquitectura mientras desarrollamos una app real de comida saludable: **EcoEat** 🍃🥗.
 
