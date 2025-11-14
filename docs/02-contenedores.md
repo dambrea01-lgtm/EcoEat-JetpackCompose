@@ -3,19 +3,19 @@
 | [↩️ Volver al inicio del Proyecto](../README.md) | [⬅️ Ir a Capítulo 1](../docs/01-Introduccion.md) |
 | :----------------------------------------------: | :----------------------------------------------: |
 
----
+<br/><hr/><br/>
 
 # 🧱 Índice – Capítulo 2: Contenedores en Jetpack Compose
 
-| Sección                                                                                                            | Descripción                                                                    |
-| :----------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------- |
-| [📦 Creando nuestro primer proyecto Compose](#-creando-nuestro-primer-proyecto-compose)                            | Cómo crear un proyecto vacío en Android Studio listo para Jetpack Compose.     |
-| [🚀 Primer paso: entender la estructura base del proyecto](#-primer-paso-entender-la-estructura-base-del-proyecto) | Exploración de la estructura de carpetas, archivos clave y MainActivity.       |
-| [🎨 Creando tu primer Composable y Preview](#-creando-tu-primer-composable-y-preview)                              | Cómo declarar un Composable, usar `@Preview` y visualizarlo en Android Studio. |
+| Sección                                                                                                                 | Descripción                                                                    |
+| :---------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------- |
+| [1. 📦 Creando nuestro primer proyecto Compose](#1--creando-nuestro-primer-proyecto-compose)                            | Cómo crear un proyecto vacío en Android Studio listo para Jetpack Compose.     |
+| [2. 🚀 Primer paso: entender la estructura base del proyecto](#2--primer-paso-entender-la-estructura-base-del-proyecto) | Exploración de la estructura de carpetas, archivos clave y MainActivity.       |
+| [3. 🎨 Creando tu primer Composable y Preview](#3--creando-tu-primer-composable-y-preview)                              | Cómo declarar un Composable, usar `@Preview` y visualizarlo en Android Studio. |
 
----
+<br/><hr/><br/>
 
-## 📦 Creando nuestro primer proyecto Compose
+## 1. 📦 Creando nuestro primer proyecto Compose
 
 Antes de empezar a trabajar con los **contenedores** de Jetpack Compose 🧩 —como `Column`, `Row` y `Box`— necesitamos crear nuestro **proyecto base** en Android Studio 💻.
 
@@ -94,9 +94,9 @@ Entonces seleccionamos **Kotlin DSL**, haz clic en **“Finalizar” 🏁**, y�
 
 ![nuevo proyecto abierto](assets/capitulo-02/img-03.png)
 
----
+<br/><hr/><br/>
 
-## 🚀 Primer paso: entender la estructura base del proyecto
+## 2. 🚀 Primer paso: entender la estructura base del proyecto
 
 Cada vez que creamos un proyecto nuevo en Android Studio, se genera una clase principal llamada MainActivity 📄.
 
@@ -177,9 +177,9 @@ Vamos a empezar desde cero. No quiero que nos confundamos. Tu archivo debe queda
 
 ![punto de partida solo setContent](assets/capitulo-02/img-11.png)
 
----
+<br/><hr/><br/>
 
-## 🎨 Creando tu primer Composable y Preview
+## 3. 🎨 Creando tu primer Composable y Preview
 
 Ahora vamos a empezar a pintar algo en pantalla. En **Jetpack Compose**, todo lo que ves en la UI se construye con funciones Composable. Nosotros le decimos a Compose qué mostrar, y Compose se encarga de cómo dibujarlo.
 
@@ -258,11 +258,11 @@ Podemos mejorar un poco la visualización de nuestra Preview, gracias a los atri
 
 ![preview con nuevos atributos](assets/capitulo-02/img-19.png)
 
----
+<br/><hr/><br/>
 
 (desarrollando)
 
----
+<br/><hr/><br/>
 
 | [⬅️ Ir al Capítulo 1](../docs/01-Introduccion.md) | [⬆️ Ir al inicio del capítulo](#-capítulo-2--contenedores-en-jetpack-compose) | [↩️ Volver al inicio del proyecto](../README.md) |
 | :-----------------------------------------------: | :---------------------------------------------------------------------------: | :----------------------------------------------: |

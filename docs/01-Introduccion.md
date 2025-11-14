@@ -3,39 +3,39 @@
 | [↩️ Volver al inicio del Proyecto](../README.md) | [➡️ Capítulo 2](../docs/02-contenedores.md) |
 | :----------------------------------------------: | :-----------------------------------------: |
 
----
+<br/><hr/><br/>
 
 Bienvenido al primer capítulo del curso de **Jetpack Compose** 💻.  
 En esta sección sentaremos las bases del desarrollo moderno en Android, aprendiendo **qué es Jetpack Compose**, por qué es tan importante hoy en día y cómo se diferencia del enfoque clásico con XML.  
 Además, exploraremos conceptos clave como **Kotlin Multiplatform (KMP)**, **Material Design**, y los **paradigmas declarativo e imperativo**, para entender cómo pensar en Compose desde cero.  
 Terminaremos creando nuestro **primer Composable “Hola Mundo” 👋**, el punto de partida para todas nuestras futuras interfaces.
 
----
+<br/><hr/><br/>
 
 # 📚 Índice
 
-| Sección                                                                                                            | Descripción                                                                  |
-| :----------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------- |
-| [✨ Introducción](#introducción)                                                                                   | Qué aprenderás en este capítulo y por qué Jetpack Compose es importante.     |
-| [☕ Kotlin y desarrollo nativo](#-kotlin-y-desarrollo-nativo)                                                      | Ventajas de Kotlin y por qué lo usamos para desarrollo moderno en Android.   |
-| [🧩 ¿Qué es Jetpack Compose?](#-qué-es-jetpack-compose)                                                            | Conceptos básicos, diferencias con XML y ventajas de un enfoque declarativo. |
-| [📱 Plataformas compatibles con Compose](#-plataformas-compatibles-con-jetpack-compose)                            | Móvil, escritorio, web y wearables.                                          |
-| [⚙️ Kotlin Multiplatform (KMP)](#️-kotlin-multiplatform-kmp)                                                       | Compartir lógica de negocio entre plataformas y reducir duplicación.         |
-| [🔬 Estado de desarrollo y versiones](#-estado-de-desarrollo-y-versiones)                                          | Fases de la tecnología y estado actual de Compose y KMP.                     |
-| [🔮 Futuro: Compose + Kotlin Multiplatform (KMP)](#️-kotlin-multiplatform-kmp)                                     | Cómo Compose y KMP se complementan para apps multiplataforma.                |
-| [⚖️ Flutter vs Kotlin Multiplatform](#️-flutter-vs-kotlin-multiplatform)                                           | Comparación de ventajas, ecosistema y enfoque nativo vs multiplataforma.     |
-| [🧩 Ktor: APIs en Kotlin](#-ktor-apis-en-kotlin)                                                                   | Introducción a Ktor para construir APIs usando solo Kotlin.                  |
-| [🤔 Paradigmas de programación: Imperativo vs Declarativo](#-paradigmas-de-programación-imperativo-vs-declarativo) | Diferencias entre programación imperativa y declarativa.                     |
-| [🎨 ¿Qué es Material Design?](#-qué-es-material-design)                                                            | Qué es Material Design y cómo se integra en Jetpack Compose.                 |
-| [👨‍💻 Creando nuestro primer Composable: Hola Mundo](#-creando-nuestro-primer-composable-hola-mundo)                 | Primer Composable, uso de `@Composable` y `@Preview`.                        |
-| [💭 Reflexión final](#-reflexión-final)                                                                            | Resumen de lo aprendido y próximos pasos.                                    |
-| [📚 Recursos y enlaces útiles](#-recursos-y-enlaces-útiles)                                                        | Referencias oficiales y ejemplos de código.                                  |
+| Sección                                                                                                                   | Descripción                                                                  |
+| :------------------------------------------------------------------------------------------------------------------------ | :--------------------------------------------------------------------------- |
+| [1. ✨ Introducción](#1-introducción)                                                                                     | Qué aprenderás en este capítulo y por qué Jetpack Compose es importante.     |
+| [2. ☕ Kotlin y desarrollo nativo](#2--kotlin-y-desarrollo-nativo)                                                        | Ventajas de Kotlin y por qué lo usamos para desarrollo moderno en Android.   |
+| [3. 🧩 ¿Qué es Jetpack Compose?](#3--qué-es-jetpack-compose)                                                              | Conceptos básicos, diferencias con XML y ventajas de un enfoque declarativo. |
+| [4. 📱 Plataformas compatibles con Compose](#4--plataformas-compatibles-con-jetpack-compose)                              | Móvil, escritorio, web y wearables.                                          |
+| [5. ⚙️ Kotlin Multiplatform (KMP)](#5-️-kotlin-multiplatform-kmp)                                                         | Compartir lógica de negocio entre plataformas y reducir duplicación.         |
+| [6. 🔬 Estado de desarrollo y versiones](#6--estado-de-desarrollo-y-versiones)                                            | Fases de la tecnología y estado actual de Compose y KMP.                     |
+| [7. 🔮 Futuro: Compose + Kotlin Multiplatform (KMP)](#7--futuro-compose--kotlin-multiplatform-kmp)                        | Cómo Compose y KMP se complementan para apps multiplataforma.                |
+| [8. ⚖️ Flutter vs Kotlin Multiplatform](#8-️-flutter-vs-kotlin-multiplatform)                                             | Comparación de ventajas, ecosistema y enfoque nativo vs multiplataforma.     |
+| [9. 🧩 Ktor: APIs en Kotlin](#9--ktor-apis-en-kotlin)                                                                     | Introducción a Ktor para construir APIs usando solo Kotlin.                  |
+| [10. 🤔 Paradigmas de programación: Imperativo vs Declarativo](#10--paradigmas-de-programación-imperativo-vs-declarativo) | Diferencias entre programación imperativa y declarativa.                     |
+| [11. 🎨 ¿Qué es Material Design?](#11--qué-es-material-design)                                                            | Qué es Material Design y cómo se integra en Jetpack Compose.                 |
+| [12. 👨‍💻 Creando nuestro primer Composable: Hola Mundo](#12--creando-nuestro-primer-composable-hola-mundo)                 | Primer Composable, uso de `@Composable` y `@Preview`.                        |
+| [13. 💭 Reflexión final](#13--reflexión-final)                                                                            | Resumen de lo aprendido y próximos pasos.                                    |
+| [14. 📚 Recursos y enlaces útiles](#14--recursos-y-enlaces-útiles)                                                        | Referencias oficiales y ejemplos de código.                                  |
 
 |
 
----
+<br/><hr/><br/>
 
-## ✨Introducción
+## 1. ✨Introducción
 
 Quizás muchos de ustedes vienen de trabajar con Android clásico (XML) 📄,  
 algunos quizás nunca han trabajado con Android 😅.
@@ -52,9 +52,9 @@ Exploraremos:
 - Su enfoque multiplataforma 🌍
 - Nuevas características y buenas prácticas 🧭
 
----
+<br/><hr/><br/>
 
-## ☕ Kotlin y desarrollo nativo
+## 2. ☕ Kotlin y desarrollo nativo
 
 Trabajaremos con **Kotlin** y desarrollo nativo Android.  
 Otras alternativas multiplataforma: Flutter, React Native, Xamarin/Maui.
@@ -115,9 +115,9 @@ println("Fecha actual: $date")
 
 - Gracias a esta interoperabilidad, podemos combinar lo mejor de ambos mundos: la seguridad y concisión de Kotlin junto con la robustez y madurez de Java.
 
----
+<br/><hr/><br/>
 
-## 🧩 ¿Qué es Jetpack Compose?
+## 3. 🧩 ¿Qué es Jetpack Compose?
 
 ![logotipo jetpack compose](assets/capitulo-01/introduccion-03.png)
 
@@ -129,9 +129,9 @@ Jetpack Compose es un **kit de herramientas para construir interfaces nativas** 
 
 **Ventaja clave:** Compose simplifica enormemente el trabajo y es cada vez más solicitado en el mundo laboral . Tener experiencia en Compose además de XML es un **plus para nuestro currículum ➕**.
 
----
+<br/><hr/><br/>
 
-## 📱 Plataformas compatibles con Jetpack Compose
+## 4. 📱 Plataformas compatibles con Jetpack Compose
 
 Jetpack Compose no se limita a Android:
 
@@ -142,9 +142,9 @@ Jetpack Compose no se limita a Android:
 
 🎯 **Foco del aprendizaje:** dominar Compose para **todas las plataformas posibles**
 
----
+<br/><hr/><br/>
 
-## ⚙️ Kotlin Multiplatform (KMP)
+## 5. ⚙️ Kotlin Multiplatform (KMP)
 
 ![logotipo KMP](assets/capitulo-01/introduccion-05.png)
 
@@ -171,9 +171,9 @@ Con KMP 🌐:
 
 **Resultado:** más eficiencia y menos duplicación de código
 
----
+<br/><hr/><br/>
 
-## 🔬 Estado de desarrollo y versiones
+## 6. 🔬 Estado de desarrollo y versiones
 
 Cuando se lanza una nueva tecnología, pasa por estas etapas:
 
@@ -187,9 +187,9 @@ Actualmente:
 - Jetpack Compose: **Productivo ⚙️**
 - KMP: **Beta 🧪**, se espera producción pronto 🚀
 
----
+<br/><hr/><br/>
 
-## 🔮 Futuro: Compose + Kotlin Multiplatform (KMP)
+## 7. 🔮 Futuro: Compose + Kotlin Multiplatform (KMP)
 
 Si pensamos en el futuro de las apps multiplataforma 🌍:
 
@@ -200,9 +200,9 @@ Si pensamos en el futuro de las apps multiplataforma 🌍:
   - Diseño unificado para Android 📱 y iOS 🍏
   - Lógica de negocio compartida y fácil de mantener
 
----
+<br/><hr/><br/>
 
-## ⚖️ Flutter vs Kotlin Multiplatform
+## 8. ⚖️ Flutter vs Kotlin Multiplatform
 
 ![logotipo Flutter vs jetpack compose](assets/capitulo-01/introduccion-06.png)
 
@@ -221,9 +221,9 @@ En resumen:
 > Kotlin Multiplatform = flexibilidad + código compartido 💪  
 > Flutter = rapidez + ecosistema de widgets ⚡
 
----
+<br/><hr/><br/>
 
-## 🧩 Ktor: APIs en Kotlin
+## 9. 🧩 Ktor: APIs en Kotlin
 
 ![logotipo ktor](assets/capitulo-01/introduccion-04.png)
 
@@ -232,16 +232,14 @@ Ejemplo práctico: puedes hacer llamadas a una base de datos MySQL 🐘 usando *
 
 Actualmente, **Spring Boot + Kotlin** también es muy popular y es fácil crear proyectos desde el IDE con Kotlin como lenguaje principal
 
----
+<br/><hr/><br/>
 
-## 🤔 Paradigmas de programación: Imperativo vs Declarativo
+## 10. 🤔 Paradigmas de programación: Imperativo vs Declarativo
 
 Cuando hablamos de **Jetpack Compose**, es importante entender el cambio de paradigma:
 
 - **Imperativo**: cómo trabajábamos con XML, donde le dices al programa **paso a paso qué hacer**.
 - **Declarativo**: como Compose, donde le dices al programa **qué resultado final quieres**, y él se encarga de los pasos.
-
----
 
 ### 📘 Programación Imperativa
 
@@ -283,9 +281,9 @@ No te preocupas por cada acción individual, solo defines el **resultado esperad
 - Declarativo: describes **qué quieres lograr** 🎯
 - Jetpack Compose funciona de manera **declarativa**, así que aprender a pensar así es clave
 
----
+<br/><hr/><br/>
 
-## 🎨 ¿Qué es Material Design?
+## 11. 🎨 ¿Qué es Material Design?
 
 **Material Design** es un sistema de diseño creado por Google para construir **interfaces visuales coherentes, atractivas y funcionales** en apps y web 🌐📱💻.
 
@@ -341,9 +339,9 @@ No necesitamos XML ni estilos complicados: Compose ya aplica las guías de Mater
 
 > En resumen: Material Design + Jetpack Compose te permite crear apps visualmente atractivas, consistentes y modernas con mucho menos código y más productividad 💪📱💻.
 
----
+<br/><hr/><br/>
 
-## 👨‍💻 Creando nuestro primer Composable: Hola Mundo
+## 12. 👨‍💻 Creando nuestro primer Composable: Hola Mundo
 
 Para empezar con **Jetpack Compose**, primero creamos una clase Kotlin dentro de nuestra carpeta `kotlin + java` en el proyecto de Android Studio.  
 Yo la llamé:
@@ -426,7 +424,7 @@ fun PreviewSaludo() {
 
 ---
 
-## 💭 Reflexión final
+## 13. 💭 Reflexión final
 
 ¡Felicidades! 🎉  
 Has completado el capítulo introductorio de **Jetpack Compose**.
@@ -444,16 +442,16 @@ Ahora ya tienes las bases para empezar a construir tus primeras interfaces de ma
 
 > Recuerda: lo importante es practicar. Repite los ejemplos, prueba modificar el código y comienza a familiarizarte con este nuevo enfoque de desarrollo.
 
----
+<br/><hr/><br/>
 
-## 📚 Recursos y enlaces útiles
+## 14. 📚 Recursos y enlaces útiles
 
 - [Código de ejemplo: Hola Mundo JetPack Compose](../ejemplos/Capitulo-01/HolaMundoJepackCompose.kt) 🧩
 - [Material Design](https://material.io/) 🎨
 - [Ktor - Framework para APIs en Kotlin](https://ktor.io/) ⚙️
 - [Kotlin Multiplatform (KMP)](https://kotlinlang.org/docs/multiplatform.html) 🌐
 
----
+<br/><hr/><br/>
 
 ## 💡 Próximos pasos
 
@@ -471,7 +469,7 @@ Además, haremos **una batería de ejercicios prácticos** para reforzar estos c
 
 > Estos conceptos son la base de todo lo que haremos más adelante, así que los trabajaremos paso a paso con ejemplos visuales y prácticos 💡
 
----
+<br/><hr/><br/>
 
 | [↩️ Volver al inicio del proyecto](../README.md) | [⬆️ Ir al inicio del capítulo](#-capitulo-1-introducción-jetpack-compose---ecoeat) | [➡️ Ir al Capítulo 2](../docs/02-contenedores.md) |
 | :----------------------------------------------: | :--------------------------------------------------------------------------------: | :------------------------------------------------ |
