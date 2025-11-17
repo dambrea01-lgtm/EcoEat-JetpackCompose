@@ -258,6 +258,44 @@ Podemos mejorar un poco la visualización de nuestra Preview, gracias a los atri
 
 ![preview con nuevos atributos](assets/capitulo-02/img-19.png)
 
+<br/>
+
+**Un punto importante antes de continuar**
+
+Hay algo que debemos tener muy en cuenta: si ejecutas la aplicación tal como está ahora mismo… ¿qué crees que va a pasar? 🤔 No se va a mostrar nada en pantalla. 🚫
+
+👉 **¿Por qué?**
+
+Porque lo que realmente se ejecuta cuando presionas Run ▶️ no es la preview, sino el contenido que tengas dentro del **MainActivity**.
+
+La **preview** es solo eso: una previsualización dentro del editor …pero no es lo que la app renderiza al ejecutarse.
+
+📌 Entonces, **¿qué debemos hacer?**
+
+Si quieres que en el emulador se vea lo mismo que aparece en tu preview, debes llamar a tu función composable desde el MainActivity.
+
+Por ejemplo, en tu MainActivity, dentro del **setContent**, coloca tu composable así:
+
+```kotlin
+    setContent {
+        MyFirstComposable()
+    }
+```
+
+![preview con nuevos atributos](assets/capitulo-02/img-21.png)
+
+<br/>
+
+🚀 **¿Qué pasa ahora cuando ejecutas la app?**
+
+Cuando le das a Run ▶️, el emulador abrirá tu aplicación y Android dirá:
+
+“Ok, debo ejecutar MyFirstComposable()”.
+
+Y entonces pintará en pantalla lo que hayas definido en esa función. Por ejemplo, si tu composable muestra el texto "Hola! Soy Brea developer", eso es lo que aparecerá.
+
+![preview con nuevos atributos](assets/capitulo-02/img-22.png)
+
 <br/><hr/><br/>
 
 (desarrollando)
