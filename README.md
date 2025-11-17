@@ -32,13 +32,14 @@ En este proyecto vamos a **explorar juntos Jetpack Compose**, la nueva forma dec
   - [📚 Recursos y enlaces útiles]
 ```
 
-### [2 - Estructuras básicas de UI (en desarrollo)](docs/02-contenedores.md)
+### [2 - Contenedores en Jetpack Compose](docs/02-contenedores.md)
 
 ```text
   - [ 📦 Creando nuestro primer proyecto Compose ]
   - [ 🚀 Primer paso: entender la estructura base del proyecto ]
   - [ 🎨 Creando tu primer Composable y Preview ]
   - [ 🤨 Entendiendo el comportamiento de Compose al organizar componentes]
+  - [ 📏 Usando Column y modifiers: organizando y dando estilo a tus composables]
   - [ desarrollando ]
 ```
 

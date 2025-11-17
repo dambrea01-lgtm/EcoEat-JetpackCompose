@@ -35,7 +35,7 @@ Terminaremos creando nuestro **primer Composable “Hola Mundo” 👋**, el pun
 
 <br/><hr/><br/>
 
-## 1. ✨Introducción
+## [1. ✨Introducción](#-capitulo-1-introducción-jetpack-compose---ecoeat)
 
 Quizás muchos de ustedes vienen de trabajar con Android clásico (XML) 📄,  
 algunos quizás nunca han trabajado con Android 😅.
@@ -54,7 +54,7 @@ Exploraremos:
 
 <br/><hr/><br/>
 
-## 2. ☕ Kotlin y desarrollo nativo
+## [2. ☕ Kotlin y desarrollo nativo](#-capitulo-1-introducción-jetpack-compose---ecoeat)
 
 Trabajaremos con **Kotlin** y desarrollo nativo Android.  
 Otras alternativas multiplataforma: Flutter, React Native, Xamarin/Maui.
@@ -117,7 +117,7 @@ println("Fecha actual: $date")
 
 <br/><hr/><br/>
 
-## 3. 🧩 ¿Qué es Jetpack Compose?
+## [3. 🧩 ¿Qué es Jetpack Compose?](#-capitulo-1-introducción-jetpack-compose---ecoeat)
 
 ![logotipo jetpack compose](assets/capitulo-01/introduccion-03.png)
 
@@ -131,7 +131,7 @@ Jetpack Compose es un **kit de herramientas para construir interfaces nativas** 
 
 <br/><hr/><br/>
 
-## 4. 📱 Plataformas compatibles con Jetpack Compose
+## [4. 📱 Plataformas compatibles con Jetpack Compose](#-capitulo-1-introducción-jetpack-compose---ecoeat)
 
 Jetpack Compose no se limita a Android:
 
@@ -144,7 +144,7 @@ Jetpack Compose no se limita a Android:
 
 <br/><hr/><br/>
 
-## 5. ⚙️ Kotlin Multiplatform (KMP)
+## [5. ⚙️ Kotlin Multiplatform (KMP)](#-capitulo-1-introducción-jetpack-compose---ecoeat)
 
 ![logotipo KMP](assets/capitulo-01/introduccion-05.png)
 
@@ -173,7 +173,7 @@ Con KMP 🌐:
 
 <br/><hr/><br/>
 
-## 6. 🔬 Estado de desarrollo y versiones
+## [6. 🔬 Estado de desarrollo y versiones](#-capitulo-1-introducción-jetpack-compose---ecoeat)
 
 Cuando se lanza una nueva tecnología, pasa por estas etapas:
 
@@ -189,7 +189,7 @@ Actualmente:
 
 <br/><hr/><br/>
 
-## 7. 🔮 Futuro: Compose + Kotlin Multiplatform (KMP)
+## [7. 🔮 Futuro: Compose + Kotlin Multiplatform (KMP)](#-capitulo-1-introducción-jetpack-compose---ecoeat)
 
 Si pensamos en el futuro de las apps multiplataforma 🌍:
 
@@ -202,7 +202,7 @@ Si pensamos en el futuro de las apps multiplataforma 🌍:
 
 <br/><hr/><br/>
 
-## 8. ⚖️ Flutter vs Kotlin Multiplatform
+## [8. ⚖️ Flutter vs Kotlin Multiplatform](#-capitulo-1-introducción-jetpack-compose---ecoeat)
 
 ![logotipo Flutter vs jetpack compose](assets/capitulo-01/introduccion-06.png)
 
@@ -223,7 +223,7 @@ En resumen:
 
 <br/><hr/><br/>
 
-## 9. 🧩 Ktor: APIs en Kotlin
+## [9. 🧩 Ktor: APIs en Kotlin](#-capitulo-1-introducción-jetpack-compose---ecoeat)
 
 ![logotipo ktor](assets/capitulo-01/introduccion-04.png)
 
@@ -234,7 +234,7 @@ Actualmente, **Spring Boot + Kotlin** también es muy popular y es fácil crear 
 
 <br/><hr/><br/>
 
-## 10. 🤔 Paradigmas de programación: Imperativo vs Declarativo
+## [10. 🤔 Paradigmas de programación: Imperativo vs Declarativo](#-capitulo-1-introducción-jetpack-compose---ecoeat)
 
 Cuando hablamos de **Jetpack Compose**, es importante entender el cambio de paradigma:
 
@@ -283,7 +283,7 @@ No te preocupas por cada acción individual, solo defines el **resultado esperad
 
 <br/><hr/><br/>
 
-## 11. 🎨 ¿Qué es Material Design?
+## [11. 🎨 ¿Qué es Material Design?](#-capitulo-1-introducción-jetpack-compose---ecoeat)
 
 **Material Design** es un sistema de diseño creado por Google para construir **interfaces visuales coherentes, atractivas y funcionales** en apps y web 🌐📱💻.
 
@@ -341,7 +341,7 @@ No necesitamos XML ni estilos complicados: Compose ya aplica las guías de Mater
 
 <br/><hr/><br/>
 
-## 12. 👨‍💻 Creando nuestro primer Composable: Hola Mundo
+## [12. 👨‍💻 Creando nuestro primer Composable: Hola Mundo](#-capitulo-1-introducción-jetpack-compose---ecoeat)
 
 Para empezar con **Jetpack Compose**, primero creamos una clase Kotlin dentro de nuestra carpeta `kotlin + java` en el proyecto de Android Studio.  
 Yo la llamé:
@@ -424,7 +424,7 @@ fun PreviewSaludo() {
 
 ---
 
-## 13. 💭 Reflexión final
+## [13. 💭 Reflexión final](#-capitulo-1-introducción-jetpack-compose---ecoeat)
 
 ¡Felicidades! 🎉  
 Has completado el capítulo introductorio de **Jetpack Compose**.
@@ -444,7 +444,7 @@ Ahora ya tienes las bases para empezar a construir tus primeras interfaces de ma
 
 <br/><hr/><br/>
 
-## 14. 📚 Recursos y enlaces útiles
+## [14. 📚 Recursos y enlaces útiles](#-capitulo-1-introducción-jetpack-compose---ecoeat)
 
 - [Código de ejemplo: Hola Mundo JetPack Compose](../ejemplos/Capitulo-01/HolaMundoJepackCompose.kt) 🧩
 - [Material Design](https://material.io/) 🎨
