@@ -7,11 +7,12 @@
 
 # 🧱 Índice – Capítulo 2: Contenedores en Jetpack Compose
 
-| Sección                                                                                                                 | Descripción                                                                    |
-| :---------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------- |
-| [1. 📦 Creando nuestro primer proyecto Compose](#1--creando-nuestro-primer-proyecto-compose)                            | Cómo crear un proyecto vacío en Android Studio listo para Jetpack Compose.     |
-| [2. 🚀 Primer paso: entender la estructura base del proyecto](#2--primer-paso-entender-la-estructura-base-del-proyecto) | Exploración de la estructura de carpetas, archivos clave y MainActivity.       |
-| [3. 🎨 Creando tu primer Composable y Preview](#3--creando-tu-primer-composable-y-preview)                              | Cómo declarar un Composable, usar `@Preview` y visualizarlo en Android Studio. |
+| Sección                                                                                                                                          | Descripción                                                                                                                                |
+| :----------------------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------- |
+| [1. 📦 Creando nuestro primer proyecto Compose](#1--creando-nuestro-primer-proyecto-compose)                                                     | Cómo crear un proyecto vacío en Android Studio listo para Jetpack Compose.                                                                 |
+| [2. 🚀 Primer paso: entender la estructura base del proyecto](#2--primer-paso-entender-la-estructura-base-del-proyecto)                          | Exploración de la estructura de carpetas, archivos clave y MainActivity.                                                                   |
+| [3. 🎨 Creando tu primer Composable y Preview](#3--creando-tu-primer-composable-y-preview)                                                       | Cómo declarar un Composable, usar `@Preview` y visualizarlo en Android Studio.                                                             |
+| [4. 🤨 Entendiendo el comportamiento de Compose al organizar componentes](#4--entendiendo-el-comportamiento-de-compose-al-organizar-componentes) | cómo Compose posiciona los elementos por defecto y por qué necesitamos contenedores como Box, Column y Row para organizarlos correctamente |
 
 <br/><hr/><br/>
 
@@ -282,7 +283,7 @@ Por ejemplo, en tu MainActivity, dentro del **setContent**, coloca tu composable
     }
 ```
 
-![preview con nuevos atributos](assets/capitulo-02/img-21.png)
+![codigo setContent](assets/capitulo-02/img-21.png)
 
 <br/>
 
@@ -294,7 +295,76 @@ Cuando le das a Run ▶️, el emulador abrirá tu aplicación y Android dirá:
 
 Y entonces pintará en pantalla lo que hayas definido en esa función. Por ejemplo, si tu composable muestra el texto "Hola! Soy Brea developer", eso es lo que aparecerá.
 
-![preview con nuevos atributos](assets/capitulo-02/img-22.png)
+Por lo tanto, la función principal de las Previews son mostrar como se verá nuestra app sin tener que ejecutar el emulador.
+
+![emulando nuestra app](assets/capitulo-02/img-22.png)
+
+<br/><hr/><br/>
+
+## 4. 🤨 Entendiendo el comportamiento de Compose al organizar componentes
+
+Ahora vamos a enfocarnos en nuestro composable para comprender un concepto muy importante dentro de Jetpack Compose.
+
+Imagina que colocas dos textos directamente, uno debajo del otro, así como están.
+
+```kotlin
+    @Composable
+    fun MyFirstComposable(){
+        Text(text = "Hola! Soy Brea developer")
+        Text(text = "Hola! Soy Brea EEEEEEEEEEEEEEEEEEEE")
+    }
+```
+
+![dos text en composable](assets/capitulo-02/img-23.png)
+
+Lógicamente podríamos pensar:
+
+“Debería aparecer un texto al costado del otro”, o “Quizás uno abajo del otro”…
+
+Pero eso no es lo que realmente pasa.
+
+En Compose, cuando colocas dos elementos sin ningún contenedor que los organice,
+Compose los apila, es decir, los pone uno encima del otro. Como si los pegara en la misma posición exacta 🧱⬆️⬆️. Si refrescamos nuestra preview, observamos lo siguiente:
+
+![previsualizacion de los dos text](assets/capitulo-02/img-24.png)
+
+🧩 **¿Por qué ocurre esto?**
+
+Este es el comportamiento por defecto de Compose cuando no hay un contenedor
+(Column, Row, Box, etc.) que le diga cómo debe organizar los elementos.
+
+En otras palabras:
+
+“Si no me especificas nada, yo los pongo uno encima del otro”.
+
+<br>
+
+🧱 **¿Por qué usar contenedores en Compose?**
+
+Bueno, hasta aquí vimos que si ponemos dos textos sin ningún contenedor, Compose simplemente los monta uno encima del otro. Pero seamos sinceros… en una app real nadie quiere eso 😅
+
+Normalmente vamos a querer algo mucho más ordenado, como:
+
+👉 poner un elemento debajo del otro
+👉 o ponerlos uno al costado del otro
+
+Dependiendo del diseño que estemos haciendo 🎨
+
+Y para eso necesitamos usar **contenedores**.
+
+Los **contenedores** son los que le dicen a Compose cómo organizar los elementos en pantalla. Vamos a estudiar tres contenedores súper importantes:
+
+1️⃣ Box 📦
+2️⃣ Column 🧩
+3️⃣ Row ↔️
+
+![tipos de contenedores](assets/capitulo-02/img-25.png)
+
+👉 **Box:** El Box es como el **FrameLayout de XML**. Imagínate una caja donde puedes meter varios componentes y Compose los va apilando, es decir, uno encima del otro. Sirve mucho cuando necesitas superponer cosas. Por ejemplo: texto arriba de una imagen, íconos flotando, etc.
+
+👉 **Column:** La Column es la más fácil de todas. Todo lo que pongas dentro va a quedar uno debajo del otro ⬇️
+
+👉 **Row:** La Row funciona al revés que la Column: colocan los elementos uno al lado del otro ↔️ Perfecta para filas, menús horizontales, etc.
 
 <br/><hr/><br/>
 
