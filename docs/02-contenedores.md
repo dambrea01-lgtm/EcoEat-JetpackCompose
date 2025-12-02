@@ -919,7 +919,7 @@ Esto ayuda muchísimo cuando aún no recuerdas todos los nombres.
 
 <br/><hr/><br/>
 
-## 8. 📦 Box: El tercer contenedor importante
+## 8. [📦 Box: El tercer contenedor importante](#-índice--capítulo-2-contenedores-en-jetpack-compose)
 
 Después de aprender Row y Column, toca conocer el Box.
 
@@ -940,6 +940,274 @@ No es que se “apilen” literalmente como hojas, sino que en Box comparten el 
 > **Esto es clave: ningún contenedor trabaja “solo”.**
 
 Puedes poner: Una **Column** dentro de una **Row**. Una **Row** dentro de un **Box**. Un **Box** dentro de una **Row** dentro de una **Column** dentro de… 😅 Jetpack Compose es súper flexible.
+
+Veamos un caso práctico, para entender el potencial del contenedor Box:
+
+### El problema de spacedBy: pierde el centrado
+
+Mira esto:
+
+Si tienes una Row centrada con 3 botones, como vimos en la secciones anteriores:
+
+```kotlin
+    horizontalArrangement = Arrangement.Center
+```
+
+<br/>
+
+![botones centrado](assets/capitulo-02/img-51.png)
+
+<br/>
+
+Y ahora lo que queremos es separar esos botones con un espacio entre ellos y que permanezcan centrado en la pantalla, si modificas el código y pones spacedBy con una distancia de 10.dp:
+
+```kotlin
+    Arrangement.spacedBy(10.dp)
+```
+
+<br/>
+
+![codigo row con spaceBy](assets/capitulo-02/img-53.png)
+
+<br/>
+
+Sí, los separa… ❗ Pero ya NO están centrados.
+
+<br/>
+
+![codigo row con spaceBy](assets/capitulo-02/img-54.png)
+
+<br/>
+
+**¿Por qué pasa esto?**
+
+Porque **spacedBy** distribuye los elementos desde el inicio del contenedor, no desde el centro.
+
+Entonces aparece la típica duda:
+
+> **👉 “¿Cómo separo los elementos pero mantengo toda la Row centrada?”**
+
+Y ahí es donde aparece el Box 💪📦
+
+### Usando Box para centrar una Row completa
+
+El truco es simple, **metes la Row dentro de un Box**.
+
+Para no borrar lo que tenemos de secciones anteriores, vamos a crear un nuevo @Composable MyBox para verlo en la preview MyBoxPreview.
+
+```kotlin
+    @Composable
+    fun MyBox(){
+
+    }
+
+    @Preview(name = "My Preview", showBackground = true, showSystemUi = true)
+    @Composable
+    fun MyBoxPreview() {
+        MyBox()
+    }
+```
+
+<br/>
+
+![codigo nuevo Composable y preview para box](assets/capitulo-02/img-55.png)
+
+<br/>
+
+Ahora cuando creamos un Box, Jetpack Compose automáticamente nos sugiere agregar un modifier.
+
+<br/>
+
+![sugerencia al crear un Box](assets/capitulo-02/img-56.png)
+
+<br/>
+
+Como queremos que este Box ocupe toda la pantalla, le colocamos:
+
+```kotlin
+    modifier = Modifier.fillMaxSize()
+```
+
+Ya sabes: fillMaxSize() → usa todo el ancho y alto disponible. Antes de seguir, un clásico… [Ctrl + Alt + L] para dejar el código bonito y ordenado.
+
+<br/>
+
+![sugerencia al crear un Box](assets/capitulo-02/img-57.png)
+
+<br/>
+
+> **🧱 Metiendo nuestra Row dentro del Box**
+
+Ahora viene el paso clave: Voy a tomar la Row que ya teníamos hecha y la voy a mover dentro del Box. No esperes que pase algo espectacular todavía, porque realmente no va a cambiar nada visual en ese momento.
+
+```kotlin
+    @Composable
+    fun MyBox() {
+        Box(modifier = Modifier.fillMaxSize()) {
+            Row(
+                Modifier.fillMaxSize(),
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.spacedBy(10.dp)
+            ) {
+                Button(onClick = { }) { Text("Button 1") }
+                Button(onClick = { }) { Text("Button 2") }
+                Button(onClick = { }) { Text("Button 3") }
+            }
+        }
+    }
+```
+
+<br/>
+
+![codigo y preview de box](assets/capitulo-02/img-58.png)
+
+<br/>
+
+> **👀 ¿Y por qué se ve igual que antes?**
+
+Todo se ve igual que antes. Y eso tiene sentido: metimos la Row dentro de una caja, pero no le dijimos cómo queremos acomodarla. Entonces ahora tenemos que alinear el contenido dentro del Box.
+
+El **Box** tiene una propiedad llamada **contentAlignment**. Es la que controla dónde se van a ubicar los elementos dentro de él.
+
+Le colocamos al Box seguido de coma:
+
+```kotlin
+    Box(
+        modifier = Modifier.fillMaxSize(),
+        contentAlignment = Alignment.Center
+    )
+```
+
+<br/>
+
+![agregando el alignment.center a box](assets/capitulo-02/img-59.png)
+
+<br/>
+
+Y esto centra la Row completa dentro del Box. Importante: no centra los botones, sino la fila entera. Porque su jerarquía ahora es:
+
+- Los botones → hijos de la Row
+
+- La Row → hija del Box
+
+> **😅 ¿Y por qué no se centra verticalmente?**
+
+Porque tu Row está usando fillMaxSize(). Por eso mismo no ves cambio, porque tu fila esta ocupando toda la pantalla de la app.
+
+<br/>
+
+![no hay cambios en nuestro box](assets/capitulo-02/img-60.png)
+
+<br/>
+
+Y si un componente ocupa todo el espacio disponible, no hay forma de moverlo.Es como intentar centrar un papel que ya está pegado a todas las paredes de una caja.
+
+Para ver lo que ocupa nuestra fila de forma mas visual, podemos ponerle un background o fondo rojo a nuestra fila, agregandoselo a su modifier de la siguiente forma:
+
+```kotlin
+    Row(
+        Modifier
+            .fillMaxSize()
+            .background(Color.Red),
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.spacedBy(10.dp)
+    )
+```
+
+<br/>
+
+![codigo agregando fondo a nuestra row](assets/capitulo-02/img-61.png)
+
+<br/>
+
+De esta forma vemos claramente en nuestra preview como la fila esta ocupando todo
+
+<br/>
+
+![codigo agregando fondo a nuestra row](assets/capitulo-02/img-62.png)
+
+<br/>
+
+La solución es tan simple como cambiar el Modifier de row, para que en vez de ocupar toda la pantalla, solo ocupe el ancho de la pantalla.
+
+```kotlin
+    Modifier.fillMaxWidth()
+```
+
+<br/>
+
+![codigo agregando fondo a nuestra row](assets/capitulo-02/img-63.png)
+
+<br/>
+
+¡Y ahí sí! La fila se centra perfectamente en medio de la pantalla. Podemos cambiarle el color de fondo (background) de nuestro Box agregandole con un punto al modifier background(Color.Green), para que se vea tambien lo que ocupa nuestro Box.
+
+<br/>
+
+![agregando color a nuestro box](assets/capitulo-02/img-64.png)
+
+<br/>
+
+Vemos como nuestro Box ocupa toda la pantalla de nuestra app, mientra que nuestro Row ocupa el ancho y esta centrado verticalmente.
+
+> **🍿 Otro ejemplo rápido: un Splash estilo Netflix**
+
+<br/>
+
+![splash netflix](assets/capitulo-02/img-65.png)
+
+<br/>
+
+Básicamente se trata de un Box con fillMaxSize con una imagen
+
+```kotlin
+    Box(
+        modifier = Modifier.fillMaxSize(),
+        contentAlignment = Alignment.Center
+        )
+    {
+        Image(
+        painterResource(R.drawable.netflix_logo),
+        contentDescription = null)
+    }
+```
+
+Un Box, un logo y listo. Centrado perfecto.
+
+<br/>
+
+### 🔘 Centrar elementos dentro de la Row
+
+Ya que tenemos la Row en el medio, ahora centramos sus hijos:
+
+```kotlin
+    verticalAlignment = Alignment.CenterVertically
+    horizontalArrangement = Arrangement.Center
+```
+
+Todo queda organizado y en su sitio.
+
+<br/>
+
+![centrando botones de la row](assets/capitulo-02/img-66.png)
+
+<br/>
+
+> ➡️⬅️ Ahora para separar botones (muy fácil)
+
+Si quieres espacio entre los botones podemos colocar un Composable Spacer:
+
+```kotlin
+    Spacer(modifier = Modifier.width(8.dp))
+```
+
+Lo pones entre botón y botón. Y ya está. Nos crea un espacio.
+
+<br/>
+
+![agregando Spacer](assets/capitulo-02/img-67.png)
+
+<br/>
 
 <br/><hr/><br/>
 
