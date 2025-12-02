@@ -16,6 +16,7 @@
 | [5. 📏 Usando Column y modifiers: organizando y dando estilo a tus composables](#5--usando-column-y-modifiers-organizando-y-dando-estilo-a-tus-composables) | Aprende a usar Column junto a modifiers y atributos como `horizontalAlignment`, `verticalArrangement` y `spacedBy` para organizar y alinear elementos. |
 | [6. 🧱↔️ Introduciendo las Rows](#6-️-introducciendo-las-rows)                                                                                              | Qué es una Row, cómo funciona como contenedor horizontal y cómo agregar elementos y previews para visualizarla correctamente.                          |
 | [7. 🎛️ Modifiers y alineaciones en Row](#7-️-modifiers-y-alineaciones-en-row)                                                                               | Cómo aplicar modifiers en Row, ocupar espacio, alinear elementos según el eje horizontal/vertical y centrar correctamente tus componentes.             |
+| [8. 📦 Box: El tercer contenedor importante](#8--box-el-tercer-contenedor-importante)                                                                       | desarrollando esta seccion ...                                                                                                                         |
 
 <br/><hr/><br/>
 
@@ -833,15 +834,7 @@ Row(
 )
 ```
 
-<br/>
-
-![preview MyRow](assets/capitulo-02/img-48.png)
-
-<br/>
-
-Con esto la Row ocupa todo el ancho disponible 📏.
-
-Si quieres que ocupe toda la pantalla:
+Con esto la Row ocupa todo el ancho disponible 📏. Si quieres que ocupe toda la pantalla:
 
 ```kotlin
 Modifier.fillMaxSize()
@@ -859,14 +852,15 @@ Ya explicamos esto, así que no profundizo más porque ya vimos cómo funcionan 
 
 ### 🧭 Alineaciones en Row (importante)
 
-Column y Row tienen propiedades muy parecidas, pero los nombres se invierten según el eje.
+**Column y Row** tienen propiedades muy parecidas, pero los nombres se invierten según el eje.
 
-- En Column tenemos: verticalArrangement y horizontalAlignment
+- En **Column** tenemos: verticalArrangement y horizontalAlignment
 
-- En Row tenemos: horizontalArrangement y verticalAlignment
+- En **Row** tenemos: horizontalArrangement y verticalAlignment
 
 **¿Por qué cambia los atributos según column?**
-Porque Row trabaja de izquierda a derecha → Su eje principal es horizontal. Esto es muy importante para evitar confundirse cuando estés diseñando interfaces.
+
+- Porque Row trabaja de izquierda a derecha → Su eje principal es horizontal. Esto es muy importante para evitar confundirse cuando estés diseñando interfaces.
 
 ### 🎯 Aplicando alineación a nuestra Row
 
@@ -900,11 +894,11 @@ Con esto: Los botones quedan alineados verticalmente al centro. Y también queda
 
 **🎯 Centrar elementos dentro de una Row**
 
-Cuando usas horizontalArrangement = Arrangement.Center, tus elementos quedan centrados en la fila. Y sí, esto funciona súper bien para colocar los botones exactamente en el medio 😊
+Cuando usas horizontalArrangement = Arrangement.Center, básicamente le estás diciendo a la Row que coloque todo su contenido justo en el medio del eje horizontal. Y sí, funciona súper bien para colocar botones o textos centrados.
 
-Pero aquí viene un truco que muchos no saben al comienzo:
+Pero hay un truco muy útil cuando estás empezando:
 
-> **Tip de estudiante:** Si estás dentro de un Row (o cualquier Composable) y haces Ctrl + P, Compose te muestra todos los parámetros disponibles.
+> 👉 Si dentro de cualquier Composable presionas **Ctrl + P**, Compose te muestra todos los parámetros que puedes usar.
 
 <br/>
 
@@ -912,9 +906,40 @@ Pero aquí viene un truco que muchos no saben al comienzo:
 
 <br/>
 
-**Ejemplo**: Ves horizontalArrangement = Arrangement.Start y dices: "Ah ok, empieza con Arrangement, voy a buscar más opciones". Y aparecen Arrangement.Center, Arrangement.End, etc. 🙌
+Por ejemplo, si ves algo como:
 
-Muy útil cuando recién estás aprendiendo.
+horizontalArrangement = Arrangement.Start
+
+Ahí puedes darte cuenta:
+"Ok, empieza con Arrangement… seguro hay más opciones."
+
+Y efectivamente, te aparecen: Arrangement.Center, Arrangement.End, Arrangement.SpaceBetween, Arrangement.spacedBy()
+
+Esto ayuda muchísimo cuando aún no recuerdas todos los nombres.
+
+<br/><hr/><br/>
+
+## 8. 📦 Box: El tercer contenedor importante
+
+Después de aprender Row y Column, toca conocer el Box.
+
+<br/>
+
+![diferentes tipos de contenedores](assets/capitulo-02/img-25.png)
+
+<br/>
+
+Pero **¿qué es exactamente un Box?**
+
+👉 El **Box** permite poner varios elementos en la misma área y acomodarlos donde quieras: arriba, abajo, al centro, a la izquierda, a la derecha… tú eliges.
+
+No es que se “apilen” literalmente como hojas, sino que en Box comparten el mismo espacio y tú decides dónde va cada uno. Si vienes de XML en Android, esto funciona parecido a un **FrameLayout**.
+
+### 🔁 Los contenedores pueden mezclarse
+
+> **Esto es clave: ningún contenedor trabaja “solo”.**
+
+Puedes poner: Una **Column** dentro de una **Row**. Una **Row** dentro de un **Box**. Un **Box** dentro de una **Row** dentro de una **Column** dentro de… 😅 Jetpack Compose es súper flexible.
 
 <br/><hr/><br/>
 

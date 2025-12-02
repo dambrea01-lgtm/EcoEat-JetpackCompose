@@ -42,7 +42,11 @@ algunos quizás nunca han trabajado con Android 😅.
 
 La idea de este tutorial es crear una aplicación **desde el diseño hasta la implementación**, incluso aplicando algún patrón de arquitectura. Primero conoceremos bien las bases de **Jetpack Compose 💻** y luego iremos madurando este proyecto 🌱 para ponerlo en práctica.
 
+<br/>
+
 ![jetpack compose](assets/capitulo-01/introduccion-01.png)
+
+<br/>
 
 Jetpack Compose no es el futuro, es **el presente de Android 📱**. Actualmente entre el 10% y 15% de las aplicaciones en Play Store 🛒 ya están escritas en Compose.
 
@@ -63,7 +67,11 @@ Otras alternativas multiplataforma: Flutter, React Native, Xamarin/Maui.
 
 En este proyecto vamos a utilizar **Kotlin**, y lo hacemos principalmente por tres razones clave 🔑 que lo hacen ideal para el desarrollo moderno en Android:
 
+<br/>
+
 ![logotipo kotlin](assets/capitulo-01/introduccion-02.png)
+
+<br/>
 
 ### 1️⃣ Expresivo y conciso ✂️
 
@@ -119,7 +127,11 @@ println("Fecha actual: $date")
 
 ## [3. 🧩 ¿Qué es Jetpack Compose?](#-índice-capítulo-1)
 
+<br/>
+
 ![logotipo jetpack compose](assets/capitulo-01/introduccion-03.png)
+
+<br/>
 
 Jetpack Compose es un **kit de herramientas para construir interfaces nativas** de forma **declarativa**. Esto significa que, en lugar de describir _cómo_ se debe dibujar cada elemento en pantalla, simplemente describes _qué_ quieres que aparezca y Compose se encarga del resto.
 
@@ -146,7 +158,11 @@ Jetpack Compose no se limita a Android:
 
 ## [5. ⚙️ Kotlin Multiplatform (KMP)](#-índice-capítulo-1)
 
+<br/>
+
 ![logotipo KMP](assets/capitulo-01/introduccion-05.png)
+
+<br/>
 
 Antes conocido como **KMM**, ahora llamado **Kotlin Multiplatform**, permite **compartir la lógica del negocio** entre diferentes plataformas, evitando duplicar código.
 
@@ -204,7 +220,11 @@ Si pensamos en el futuro de las apps multiplataforma 🌍:
 
 ## [8. ⚖️ Flutter vs Kotlin Multiplatform](#-índice-capítulo-1)
 
+<br/>
+
 ![logotipo Flutter vs jetpack compose](assets/capitulo-01/introduccion-06.png)
+
+<br/>
 
 Comparando **Flutter 💙** y **KMP**:
 
@@ -225,7 +245,11 @@ En resumen:
 
 ## [9. 🧩 Ktor: APIs en Kotlin](#-índice-capítulo-1)
 
+<br/>
+
 ![logotipo ktor](assets/capitulo-01/introduccion-04.png)
+
+<br/>
 
 Otra herramienta interesante: **Ktor**, un framework en Kotlin para crear APIs.  
 Ejemplo práctico: puedes hacer llamadas a una base de datos MySQL 🐘 usando **solo Kotlin**
@@ -287,7 +311,11 @@ No te preocupas por cada acción individual, solo defines el **resultado esperad
 
 **Material Design** es un sistema de diseño creado por Google para construir **interfaces visuales coherentes, atractivas y funcionales** en apps y web 🌐📱💻.
 
+<br/>
+
 ![web material design](assets/capitulo-01/introduccion-07.png)
+
+<br/>
 
 En pocas palabras, es un conjunto de **principios, guías y componentes visuales** que ayudan a los desarrolladores y diseñadores a crear aplicaciones que se vean bien y sean fáciles de usar.
 
@@ -391,7 +419,11 @@ Importa la anotación @Composable, obligatoria para todas las funciones que dibu
 
 Importa @Preview, que nos permite ver el Composable en la vista previa de Android Studio sin ejecutar la app. Pulsando en split y actualizando podremos ver el resultado del Hola Mundo:
 
+<br/>
+
 ![preview hola mundo](assets/capitulo-01/introduccion-08.png)
+
+<br/>
 
 > class HolaMundoJepackCompose { ... }
 
