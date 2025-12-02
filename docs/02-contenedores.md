@@ -3,20 +3,24 @@
 | [↩️ Volver al inicio del Proyecto](../README.md) | [⬅️ Ir a Capítulo 1](../docs/01-Introduccion.md) |
 | :----------------------------------------------: | :----------------------------------------------: |
 
+<br/>
+
+Dominar Column, Row y Box es uno de los pilares más importantes de Jetpack Compose. Estos contenedores son la base de toda interfaz: organizan, alinean y distribuyen cada elemento en pantalla. Saber combinarlos correctamente te permite construir layouts flexibles, limpios y totalmente adaptables. En este capítulo aprenderás a usar estos contenedores a la perfección y a entender cómo trabajan juntos para dar forma a cualquier diseño que quieras crear.
+
 <br/><hr/><br/>
 
 # 🧱 Índice – Capítulo 2: Contenedores en Jetpack Compose
 
-| Sección                                                                                                                                                     | Descripción                                                                                                                                            |
-| :---------------------------------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [1. 📦 Creando nuestro primer proyecto Compose](#1--creando-nuestro-primer-proyecto-compose)                                                                | Cómo crear un proyecto vacío en Android Studio listo para Jetpack Compose.                                                                             |
-| [2. 🚀 Primer paso: entender la estructura base del proyecto](#2--primer-paso-entender-la-estructura-base-del-proyecto)                                     | Exploración de la estructura de carpetas, archivos clave y MainActivity.                                                                               |
-| [3. 🎨 Creando tu primer Composable y Preview](#3--creando-tu-primer-composable-y-preview)                                                                  | Cómo declarar un Composable, usar `@Preview` y visualizarlo en Android Studio.                                                                         |
-| [4. 🤨 Entendiendo el comportamiento de Compose al organizar componentes](#4--entendiendo-el-comportamiento-de-compose-al-organizar-componentes)            | Cómo Compose posiciona los elementos por defecto y por qué necesitamos contenedores como Box, Column y Row para organizarlos correctamente.            |
-| [5. 📏 Usando Column y modifiers: organizando y dando estilo a tus composables](#5--usando-column-y-modifiers-organizando-y-dando-estilo-a-tus-composables) | Aprende a usar Column junto a modifiers y atributos como `horizontalAlignment`, `verticalArrangement` y `spacedBy` para organizar y alinear elementos. |
-| [6. 🧱↔️ Introduciendo las Rows](#6-️-introducciendo-las-rows)                                                                                              | Qué es una Row, cómo funciona como contenedor horizontal y cómo agregar elementos y previews para visualizarla correctamente.                          |
-| [7. 🎛️ Modifiers y alineaciones en Row](#7-️-modifiers-y-alineaciones-en-row)                                                                               | Cómo aplicar modifiers en Row, ocupar espacio, alinear elementos según el eje horizontal/vertical y centrar correctamente tus componentes.             |
-| [8. 📦 Box: El tercer contenedor importante](#8--box-el-tercer-contenedor-importante)                                                                       | desarrollando esta seccion ...                                                                                                                         |
+| Sección                                                                                                                                                     | Descripción                                                                                                                                              |
+| :---------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [1. 📦 Creando nuestro primer proyecto Compose](#1--creando-nuestro-primer-proyecto-compose)                                                                | Cómo crear un proyecto vacío en Android Studio listo para Jetpack Compose.                                                                               |
+| [2. 🚀 Primer paso: entender la estructura base del proyecto](#2--primer-paso-entender-la-estructura-base-del-proyecto)                                     | Exploración de la estructura de carpetas, archivos clave y MainActivity.                                                                                 |
+| [3. 🎨 Creando tu primer Composable y Preview](#3--creando-tu-primer-composable-y-preview)                                                                  | Cómo declarar un Composable, usar `@Preview` y visualizarlo en Android Studio.                                                                           |
+| [4. 🤨 Entendiendo el comportamiento de Compose al organizar componentes](#4--entendiendo-el-comportamiento-de-compose-al-organizar-componentes)            | Cómo Compose posiciona los elementos por defecto y por qué necesitamos contenedores como Box, Column y Row para organizarlos correctamente.              |
+| [5. 📏 Usando Column y modifiers: organizando y dando estilo a tus composables](#5--usando-column-y-modifiers-organizando-y-dando-estilo-a-tus-composables) | Aprende a usar Column junto a modifiers y atributos como `horizontalAlignment`, `verticalArrangement` y `spacedBy` para organizar y alinear elementos.   |
+| [6. 🧱↔️ Introduciendo las Rows](#6-️-introducciendo-las-rows)                                                                                              | Qué es una Row, cómo funciona como contenedor horizontal y cómo agregar elementos y previews para visualizarla correctamente.                            |
+| [7. 🎛️ Modifiers y alineaciones en Row](#7-️-modifiers-y-alineaciones-en-row)                                                                               | Cómo aplicar modifiers en Row, ocupar espacio, alinear elementos según el eje horizontal/vertical y centrar correctamente tus componentes.               |
+| [8. 📦 Box: El tercer contenedor importante](#8--box-el-tercer-contenedor-importante)                                                                       | Qué es un Box, cómo permite superponer y alinear elementos libremente, y cómo combinarlo con Row y Column para lograr layouts más flexibles y centrados. |
 
 <br/><hr/><br/>
 
@@ -919,7 +923,7 @@ Esto ayuda muchísimo cuando aún no recuerdas todos los nombres.
 
 <br/><hr/><br/>
 
-## 8. [📦 Box: El tercer contenedor importante](#-índice--capítulo-2-contenedores-en-jetpack-compose)
+## 8. [🔲 Box: El tercer contenedor importante](#-índice--capítulo-2-contenedores-en-jetpack-compose)
 
 Después de aprender Row y Column, toca conocer el Box.
 
