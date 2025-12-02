@@ -7,17 +7,18 @@
 
 # 🧱 Índice – Capítulo 2: Contenedores en Jetpack Compose
 
-| Sección                                                                                                                                                      | Descripción                                                                                                                                                                             |
-| :----------------------------------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [1. 📦 Creando nuestro primer proyecto Compose](#1--creando-nuestro-primer-proyecto-compose)                                                                 | Cómo crear un proyecto vacío en Android Studio listo para Jetpack Compose.                                                                                                              |
-| [2. 🚀 Primer paso: entender la estructura base del proyecto](#2--primer-paso-entender-la-estructura-base-del-proyecto)                                      | Exploración de la estructura de carpetas, archivos clave y MainActivity.                                                                                                                |
-| [3. 🎨 Creando tu primer Composable y Preview](#3--creando-tu-primer-composable-y-preview)                                                                   | Cómo declarar un Composable, usar `@Preview` y visualizarlo en Android Studio.                                                                                                          |
-| [4. 🤨 Entendiendo el comportamiento de Compose al organizar componentes](#4--entendiendo-el-comportamiento-de-compose-al-organizar-componentes)             | cómo Compose posiciona los elementos por defecto y por qué necesitamos contenedores como Box, Column y Row para organizarlos correctamente                                              |
-| [5. 📏 Usando Column y modifiers: organizando y dando estilo a tus composables](#5--usando-column-y-modifiers-organizando-y-dando-estilo-a-tus-composables) | En Compose, aprendemos cómo usar Column con modifiers y atributos como horizontalAlignment, verticalArrangement y spacedBy para organizar, alinear y separar los elementos en pantalla. |
+| Sección                                                                                                                                                     | Descripción                                                                                                                                            |
+| :---------------------------------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [1. 📦 Creando nuestro primer proyecto Compose](#1--creando-nuestro-primer-proyecto-compose)                                                                | Cómo crear un proyecto vacío en Android Studio listo para Jetpack Compose.                                                                             |
+| [2. 🚀 Primer paso: entender la estructura base del proyecto](#2--primer-paso-entender-la-estructura-base-del-proyecto)                                     | Exploración de la estructura de carpetas, archivos clave y MainActivity.                                                                               |
+| [3. 🎨 Creando tu primer Composable y Preview](#3--creando-tu-primer-composable-y-preview)                                                                  | Cómo declarar un Composable, usar `@Preview` y visualizarlo en Android Studio.                                                                         |
+| [4. 🤨 Entendiendo el comportamiento de Compose al organizar componentes](#4--entendiendo-el-comportamiento-de-compose-al-organizar-componentes)            | Cómo Compose posiciona los elementos por defecto y por qué necesitamos contenedores como Box, Column y Row para organizarlos correctamente.            |
+| [5. 📏 Usando Column y modifiers: organizando y dando estilo a tus composables](#5--usando-column-y-modifiers-organizando-y-dando-estilo-a-tus-composables) | Aprende a usar Column junto a modifiers y atributos como `horizontalAlignment`, `verticalArrangement` y `spacedBy` para organizar y alinear elementos. |
+| [6. 🧱↔️ Introduciendo las Rows](#6-🧱↔️-introduciendo-las-rows)                                                                                            | Qué es una Row, cómo funciona como contenedor horizontal y cómo agregar elementos y previews para visualizarla correctamente.                          |
 
 <br/><hr/><br/>
 
-## [1. 📦 Creando nuestro primer proyecto Compose](#-capítulo-2--contenedores-en-jetpack-compose)
+## [1. 📦 Creando nuestro primer proyecto Compose](#-índice--capítulo-2-contenedores-en-jetpack-compose)
 
 Antes de empezar a trabajar con los **contenedores** de Jetpack Compose 🧩 —como `Column`, `Row` y `Box`— necesitamos crear nuestro **proyecto base** en Android Studio 💻.
 
@@ -98,7 +99,7 @@ Entonces seleccionamos **Kotlin DSL**, haz clic en **“Finalizar” 🏁**, y�
 
 <br/><hr/><br/>
 
-## [2. 🚀 Primer paso: entender la estructura base del proyecto](#-capítulo-2--contenedores-en-jetpack-compose)
+## [2. 🚀 Primer paso: entender la estructura base del proyecto](#-índice--capítulo-2-contenedores-en-jetpack-compose)
 
 Cada vez que creamos un proyecto nuevo en Android Studio, se genera una clase principal llamada MainActivity 📄.
 
@@ -181,7 +182,7 @@ Vamos a empezar desde cero. No quiero que nos confundamos. Tu archivo debe queda
 
 <br/><hr/><br/>
 
-## [3. 🎨 Creando tu primer Composable y Preview](#-capítulo-2--contenedores-en-jetpack-compose)
+## [3. 🎨 Creando tu primer Composable y Preview](#-índice--capítulo-2-contenedores-en-jetpack-compose)
 
 Ahora vamos a empezar a pintar algo en pantalla. En **Jetpack Compose**, todo lo que ves en la UI se construye con funciones Composable. Nosotros le decimos a Compose qué mostrar, y Compose se encarga de cómo dibujarlo.
 
@@ -302,7 +303,7 @@ Por lo tanto, la función principal de las Previews son mostrar como se verá nu
 
 <br/><hr/><br/>
 
-## [4. 🤨 Entendiendo el comportamiento de Compose al organizar componentes](#-capítulo-2--contenedores-en-jetpack-compose)
+## [4. 🤨 Entendiendo el comportamiento de Compose al organizar componentes](#-índice--capítulo-2-contenedores-en-jetpack-compose)
 
 Ahora vamos a enfocarnos en nuestro composable para comprender un concepto muy importante dentro de Jetpack Compose.
 
@@ -369,7 +370,7 @@ Los **contenedores** son los que le dicen a Compose cómo organizar los elemento
 
 <br/><hr/><br/>
 
-## [5. 📏 Usando Column y modifiers: organizando y dando estilo a tus composables](#-capítulo-2--contenedores-en-jetpack-compose)
+## [5. 📏 Usando Column y modifiers: organizando y dando estilo a tus composables](#-índice--capítulo-2-contenedores-en-jetpack-compose)
 
 Bueno, ahora sí vamos a empezar a usar estos contenedores 💪
 Por ejemplo, si lo que queremos es que los textos queden uno debajo del otro, entonces tenemos que usar una **Column**.
@@ -562,8 +563,8 @@ Cada hijo se separa proporcionalmente, dejando un espacio equitativo 📏.
     horizontalAlignment = Alignment.CenterHorizontally,
     verticalArrangement = Arrangement.SpaceBetween
     ) {
-    Text("Texto 1")
-    Text("Texto 2")
+    Text("Hola! Soy Brea developer")
+    Text("Hola! Soy Brea EEEEEEEEEEEEEEEEEEEE")
     }
 ```
 
@@ -593,9 +594,9 @@ También existe **SpaceBy**, que te deja un espacio fijo entre los elementos. Po
     verticalArrangement = Arrangement.spacedBy(12.dp)
 ```
 
-**dp** → **densidad por píxel**, se usa para todo lo visual
+- **dp** → **densidad por píxel**, se usa para todo lo visual
 
-**sp** → se usa para texto, para escalar según densidad de pantalla
+- **sp** → se usa para texto, para escalar según densidad de pantalla
 
 Entonces si ponemos el siguiente codigo en nuestro @Composable:
 
@@ -622,11 +623,85 @@ El resultado es el siguiente:
 
 ![preview verticalArrangement.SpaceBy(12.dp)](assets/capitulo-02/img-43.png)
 
-➡️ **Regla general**:
-Texto → .sp
-Todo lo demás → .dp
+- ➡️ **Regla general**:
+  - Texto → .sp
+  - Todo lo demás → .dp
 
-Caso práctico: Imagina que quieres poner botones en una pantalla de login, separados de forma proporcional puedes usar SpaceBy(10.dp) y listo 😎 Ya están perfectamente separados y alineados. Eso es exactamente lo que hace **SpaceBy**, super útil para layouts ordenados en Compose.
+**Caso práctico**: Imagina que quieres poner botones en una pantalla de login, separados de forma proporcional puedes usar SpaceBy(10.dp) y listo 😎 Ya están perfectamente separados y alineados. Eso es exactamente lo que hace **SpaceBy**, super útil para layouts ordenados en Compose.
+
+<br/><hr/><br/>
+
+## [6. ↔️ Introducciendo las Rows](#-índice--capítulo-2-contenedores-en-jetpack-compose)
+
+Hasta ahora hemos estado trabajando con Column, pero las Row funcionan exactamente igual… solo que en horizontal ➡️⬅️
+
+La idea es simple:
+
+- **Column** → coloca elementos uno debajo del otro ⬇️⬇️
+- **Row** → coloca elementos uno al lado del otro ➡️⬅️
+
+Vamos a crear un nuevo Composable para las filas:
+
+```kotlin
+    @Composable
+    fun DataRows() {
+        Row { }
+    }
+```
+
+![codigo de nuevo composable para row](assets/capitulo-02/img-44.png)
+
+Yo le puse DataRow porque sí, puedes ponerle el nombre que quieras. Lo importante es que Row es otro Composable, igual que Column.
+
+<br/>
+
+### **🔘 Agregando elementos dentro de una Row**
+
+<br/>
+
+Dentro de una Row puedes poner cualquier cosa: textos, imágenes, botones, etc. Como ejemplo, vamos a poner tres botones:
+
+```kotlin
+    Row {
+        Button(onClick = { }) { Text("Botón 1") }
+        Button(onClick = { }) { Text("Botón 2") }
+        Button(onClick = { }) { Text("Botón 3") }
+    }
+```
+
+![agregando 3 botones al codigo de composable row](assets/capitulo-02/img-45.png)
+
+Esto ya debería mostrarnos tres botones uno al lado del otro 👌 Peeero… falta algo importante.
+
+<br/>
+
+**👀 ¿Por qué no se muestra mi Row?**
+
+Aunque hayas creado DataRows(), si nadie llama a esa función, no aparece en pantalla. Tu Preview probablemente está llamando a MyFirstComposable() (la columna), por eso no ves la Row.
+
+![codigo esta llamando a MyFirstComposable](assets/capitulo-02/img-46.png)
+
+Solución: crear otra Preview.
+
+<br/>
+
+### **📱 Crear una Preview para ver la Row**
+
+Puedes tener varias previews sin problema. De hecho es súper útil.
+
+```kotlin
+    @Preview(showBackground = true)
+    @Composable
+    fun MyRowPreview() {
+        MyRows()
+    }
+```
+
+![preview para mi row](assets/capitulo-02/img-47.png)
+
+Ahora Compose te mostrará otra vista previa abajo ⬇️ Una preview llama a tu Column, la otra a tu Row.
+
+![preview MyRow](assets/capitulo-02/img-48.png)
 
 <br/><hr/><br/>
 
