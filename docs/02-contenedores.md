@@ -21,6 +21,8 @@ Dominar Column, Row y Box es uno de los pilares más importantes de Jetpack Comp
 | [6. 🧱↔️ Introduciendo las Rows](#6-️-introducciendo-las-rows)                                                                                              | Qué es una Row, cómo funciona como contenedor horizontal y cómo agregar elementos y previews para visualizarla correctamente.                            |
 | [7. 🎛️ Modifiers y alineaciones en Row](#7-️-modifiers-y-alineaciones-en-row)                                                                               | Cómo aplicar modifiers en Row, ocupar espacio, alinear elementos según el eje horizontal/vertical y centrar correctamente tus componentes.               |
 | [8. 📦 Box: El tercer contenedor importante](#8--box-el-tercer-contenedor-importante)                                                                       | Qué es un Box, cómo permite superponer y alinear elementos libremente, y cómo combinarlo con Row y Column para lograr layouts más flexibles y centrados. |
+| [9. 📋 Ejercicios Propuestos](#9--ejercicios-propuestos)                                                                                                    | Ejercicios propuestos para poner en practica lo estudiado en el temario                                                                                  |
+| [10. 📚 Recurso del temario](#10--recurso-del-temario)                                                                                                      | Código usado en para la explicación del temario                                                                                                          |
 
 <br/><hr/><br/>
 
@@ -1211,11 +1213,33 @@ Lo pones entre botón y botón. Y ya está. Nos crea un espacio.
 
 ![agregando Spacer](assets/capitulo-02/img-67.png)
 
+<br/><hr/><br/>
+
+## [9. 📋 Ejercicios Propuestos](#-índice--capítulo-2-contenedores-en-jetpack-compose)
+
+- **Ejercicio 1:** Crea un preview que muestre algo similar a la siguiente imagen
+
 <br/>
+
+![agregando Spacer](assets/capitulo-02/img-68.png)
+
+<br/>
+
+- **Ejercicio 2:** Crea un preview que muestre algo similar a la siguiente imagen
+
+<br/>
+
+![agregando Spacer](assets/capitulo-02/img-68.png)
+
+<br/>
+
+[Ver solución: en desarrollo]
 
 <br/><hr/><br/>
 
-(desarrollando)
+## [10. 📚 Recurso del temario](#-índice--capítulo-2-contenedores-en-jetpack-compose)
+
+- [Ver el Código de la explicación del temario](../recursos/tema-02/MainActivity.kt)
 
 <br/><hr/><br/>
 

@@ -43,7 +43,8 @@ En este proyecto vamos a **explorar juntos Jetpack Compose**, la nueva forma dec
   - [ ↔️ Introducciendo las Rows]
   - [ 🎛️ Modifiers y alineaciones en Row]
   - [ 🔲 Box: El tercer contenedor importante]
-  - [ desarrollando ]
+  - [ 📋 Ejercicios Propuestos (... en desarrollo ...)]
+  - [ 📚 Recurso del temario]
 ```
 
 ---
