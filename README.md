@@ -41,6 +41,7 @@ En este proyecto vamos a **explorar juntos Jetpack Compose**, la nueva forma dec
   - [ 🤨 Entendiendo el comportamiento de Compose al organizar componentes]
   - [ 📏 Usando Column y modifiers: organizando y dando estilo a tus composables]
   - [ ↔️ Introducciendo las Rows]
+  - [ 🎛️ Modifiers y alineaciones en Row]
   - [ desarrollando ]
 ```
 

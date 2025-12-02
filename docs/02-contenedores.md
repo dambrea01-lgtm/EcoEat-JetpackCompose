@@ -15,6 +15,7 @@
 | [4. 🤨 Entendiendo el comportamiento de Compose al organizar componentes](#4--entendiendo-el-comportamiento-de-compose-al-organizar-componentes)            | Cómo Compose posiciona los elementos por defecto y por qué necesitamos contenedores como Box, Column y Row para organizarlos correctamente.            |
 | [5. 📏 Usando Column y modifiers: organizando y dando estilo a tus composables](#5--usando-column-y-modifiers-organizando-y-dando-estilo-a-tus-composables) | Aprende a usar Column junto a modifiers y atributos como `horizontalAlignment`, `verticalArrangement` y `spacedBy` para organizar y alinear elementos. |
 | [6. 🧱↔️ Introduciendo las Rows](#6-️-introducciendo-las-rows)                                                                                              | Qué es una Row, cómo funciona como contenedor horizontal y cómo agregar elementos y previews para visualizarla correctamente.                          |
+| [7. 🎛️ Modifiers y alineaciones en Row](#7-️-modifiers-y-alineaciones-en-row)                                                                               | Cómo aplicar modifiers en Row, ocupar espacio, alinear elementos según el eje horizontal/vertical y centrar correctamente tus componentes.             |
 
 <br/><hr/><br/>
 
@@ -34,7 +35,11 @@ Antes de empezar a trabajar con los **contenedores** de Jetpack Compose 🧩 —
 
 Tienes que seleccionar un proyecto vacio (empty) donde salga este simbolo en forma de **hexágono** y le damos a siguiente (next).
 
+<br/>
+
 ![Proyecto vacio Compose](assets/capitulo-02/img-01.png)
+
+<br/>
 
 ### 📦 Configuración del nuevo proyecto
 
@@ -91,11 +96,19 @@ Antes, Gradle usaba **Groovy DSL**, pero las versiones nuevas de Android Studio 
 
 > Esto significa que tu archivo `build.gradle.kts` estará escrito directamente en **Kotlin**, haciendo más fácil y legible la configuración del proyecto.
 
+<br/>
+
 ![configurando proyecto](assets/capitulo-02/img-02.png)
+
+<br/>
 
 Entonces seleccionamos **Kotlin DSL**, haz clic en **“Finalizar” 🏁**, y… ¡listo! Android Studio creará automáticamente tu proyecto Compose. Desde mi version de android studio (Android Studio Narwhal 3 Feature Drop | 2025.1.3) obtengo:
 
+<br/>
+
 ![nuevo proyecto abierto](assets/capitulo-02/img-03.png)
+
+<br/>
 
 <br/><hr/><br/>
 
@@ -103,7 +116,11 @@ Entonces seleccionamos **Kotlin DSL**, haz clic en **“Finalizar” 🏁**, y�
 
 Cada vez que creamos un proyecto nuevo en Android Studio, se genera una clase principal llamada MainActivity 📄.
 
+<br/>
+
 ![main activity](assets/capitulo-02/img-04.png)
+
+<br/>
 
 Esta clase es el punto de partida de nuestra aplicación: es la primera pantalla por donde el sistema operativo Android ingresa cuando abrimos la app 🔑.
 
@@ -121,7 +138,11 @@ Ahí verás otras subcarpetas clave:
 
 Contiene el archivo AndroidManifest.xml 🧾
 
+<br/>
+
 ![manifests](assets/capitulo-02/img-05.png)
+
+<br/>
 
 Aquí se declaran los permisos de la app (📷 cámara, 📍 geolocalización, 🌐 internet, etc.). También se puede definir el icono de la aplicación y otras configuraciones generales.
 
@@ -129,7 +150,11 @@ Aquí se declaran los permisos de la app (📷 cámara, 📍 geolocalización, �
 
 2️⃣ kotlin + java/
 
+<br/>
+
 ![carpeta kotlin + java](assets/capitulo-02/img-06.png)
+
+<br/>
 
 Dentro verás tres carpetas:
 
@@ -137,7 +162,11 @@ La principal, donde está el código de la app y dos carpetas adicionales para p
 
 Cuando abres la carpeta principal (que tiene el nombre de tu paquete, por ejemplo com.midominio.miapp), verás los archivos del proyecto.Los más importantes por ahora son:
 
+<br/>
+
 ![carpeta com.midominio.miapp](assets/capitulo-02/img-07.png)
+
+<br/>
 
 🧭 MainActivity.kt — el archivo donde inicia la app
 
@@ -160,7 +189,11 @@ override fun onCreate(savedInstanceState: Bundle?) {
 }
 ```
 
+<br/>
+
 ![funcion onCreate dentro de la clase MainActivity](assets/capitulo-02/img-08.png)
+
+<br/>
 
 📲 onCreate() se activa automáticamente al iniciar la app y muestra la primera pantalla
 
@@ -169,14 +202,24 @@ override fun onCreate(savedInstanceState: Bundle?) {
 🔹 Aquí declararemos nuestras vistas, botones, textos, imágenes, etc.
 🔹 Si Android Studio genera un código de ejemplo (como un “Hello Android”), puedes borrarlo 🧹 para empezar desde cero con tu propia interfaz.
 
+<br/>
+
 ![vaciamos el contenido del setContent](assets/capitulo-02/img-09.png)
+
+<br/>
 
 Y para finalizar borra tambien todo lo que selecciono en la imagen siguiente debajo de la clase MainActivity (todo el @Composable y la @Preview), luego explicaremos como crearlo nosotros mismo, y que significa.
 
+<br/>
+
 ![borrando el @Composable y la @Preview](assets/capitulo-02/img-10.png)
+
+<br/>
 
 Vamos a empezar desde cero. No quiero que nos confundamos. Tu archivo debe quedar así:
 👉 Solamente un setContent { } vacío.
+
+<br/>
 
 ![punto de partida solo setContent](assets/capitulo-02/img-11.png)
 
@@ -197,19 +240,31 @@ fun MyFirstComposable() {
 }
 ```
 
+<br/>
+
 ![codigo @Composable de saludo](assets/capitulo-02/img-12.png)
+
+<br/>
 
 💡 Explicación:
 **@Composable** indica que esta función dibuja algo en la UI.
 **Text** es un composable predefinido que muestra texto. Si ponemos el cursor sobre Text veremos como indica que Text es un composable.
 
+<br/>
+
 ![text composable](assets/capitulo-02/img-14.png)
+
+<br/>
 
 **text = "Hola! Soy Brea"** define el contenido que se verá en pantalla.
 
 > 💡 **Tip rápido**: En Android Studio, no necesitas escribir todo manualmente. Escribe comp y verás un shortcut para crear un Composable automáticamente. Presiona Enter ⏎ y se generará la estructura base. Solo asigna un nombre a tu función y agrega el contenido que quieras pintar.
 
+<br/>
+
 ![tip comp](assets/capitulo-02/img-13.png)
+
+<br/>
 
 - 2️⃣ **Usando Preview 👁️‍🗨️**
 
@@ -234,7 +289,11 @@ En resumen: los atributos son parámetros opcionales que modifican el comportami
 
 Dentro de fun Preview le decimos que funcion composable quieres mostrar. En nuestro caso le decimos MyFirstComposable()
 
+<br/>
+
 ![primer preview](assets/capitulo-02/img-15.png)
+
+<br/>
 
 - **3️⃣ Visualizando la Preview en Android Studio**
 
@@ -244,20 +303,34 @@ Encontrarás las opciones:
 
 🧩 Code | Split | Design
 
+<br/>
+
 ![split](assets/capitulo-02/img-16.png)
+
+<br/>
 
 Selecciona Split 🖥️ para ver mitad código, mitad preview. Luego le tienes que dar a refrescar y en unos segundos tenemos el preview listo.
 
 Verás el resultado de tu Composable: "Hola! Soy Brea developer"
 
+<br/>
+
 ![preview](assets/capitulo-02/img-17.png)
+
+<br/>
 
 Podemos mejorar un poco la visualización de nuestra Preview, gracias a los atributos. Si añadimos los siguientes atributos:
 
+<br/>
+
 ![agregando atributos a preview](assets/capitulo-02/img-18.png)
+
+<br/>
 
 - **showBackground** → si lo pones en true, te muestra un fondo blanco ⚪
 - **showSystemUi** → si lo pones en true, te muestra todo el dispositivo completo 📱
+
+<br/>
 
 ![preview con nuevos atributos](assets/capitulo-02/img-19.png)
 
@@ -285,6 +358,8 @@ Por ejemplo, en tu MainActivity, dentro del **setContent**, coloca tu composable
     }
 ```
 
+<br/>
+
 ![codigo setContent](assets/capitulo-02/img-21.png)
 
 <br/>
@@ -298,6 +373,8 @@ Cuando le das a Run ▶️, el emulador abrirá tu aplicación y Android dirá:
 Y entonces pintará en pantalla lo que hayas definido en esa función. Por ejemplo, si tu composable muestra el texto "Hola! Soy Brea developer", eso es lo que aparecerá.
 
 Por lo tanto, la función principal de las Previews son mostrar como se verá nuestra app sin tener que ejecutar el emulador.
+
+<br/>
 
 ![emulando nuestra app](assets/capitulo-02/img-22.png)
 
@@ -317,7 +394,11 @@ Imagina que colocas dos textos directamente, uno debajo del otro, así como est�
     }
 ```
 
+<br/>
+
 ![dos text en composable](assets/capitulo-02/img-23.png)
+
+<br/>
 
 Lógicamente podríamos pensar:
 
@@ -328,7 +409,11 @@ Pero eso no es lo que realmente pasa.
 En Compose, cuando colocas dos elementos sin ningún contenedor que los organice,
 Compose los apila, es decir, los pone uno encima del otro. Como si los pegara en la misma posición exacta 🧱⬆️⬆️. Si refrescamos nuestra preview, observamos lo siguiente:
 
+<br/>
+
 ![previsualizacion de los dos text](assets/capitulo-02/img-24.png)
+
+<br/>
 
 🧩 **¿Por qué ocurre esto?**
 
@@ -356,11 +441,15 @@ Y para eso necesitamos usar **contenedores**.
 
 Los **contenedores** son los que le dicen a Compose cómo organizar los elementos en pantalla. Vamos a estudiar tres contenedores súper importantes:
 
-1️⃣ Box 📦
-2️⃣ Column 🧩
-3️⃣ Row ↔️
+- 1️⃣ Box 📦
+- 2️⃣ Column 🧩
+- 3️⃣ Row ↔️
+
+<br/>
 
 ![tipos de contenedores](assets/capitulo-02/img-25.png)
+
+<br/>
 
 👉 **Box:** El Box es como el **FrameLayout de XML**. Imagínate una caja donde puedes meter varios componentes y Compose los va apilando, es decir, uno encima del otro. Sirve mucho cuando necesitas superponer cosas. Por ejemplo: texto arriba de una imagen, íconos flotando, etc.
 
@@ -377,7 +466,11 @@ Por ejemplo, si lo que queremos es que los textos queden uno debajo del otro, en
 
 Mira, es súper simple 👇 Solo llamamos al composable Column (acuérdate: en Compose todo son composables):
 
+<br/>
+
 ![column tambie es composable](assets/capitulo-02/img-26.png)
+
+<br/>
 
 Escribimos Column dentro de nuestro @Composable y dentro de column copiamos los dos Text:
 
@@ -391,9 +484,15 @@ Escribimos Column dentro de nuestro @Composable y dentro de column copiamos los 
     }
 ```
 
+<br/>
+
 ![codigo de column](assets/capitulo-02/img-27.png)
 
+<br/>
+
 Y listo. **¿Qué va a pasar con esto?** Pues exactamente lo que esperamos: Compose va a poner un texto debajo del otro, tal como los escribimos.
+
+<br/>
 
 ![preview column con dos textos](assets/capitulo-02/img-28.png)
 
@@ -649,7 +748,11 @@ Vamos a crear un nuevo Composable para las filas:
     }
 ```
 
+<br/>
+
 ![codigo de nuevo composable para row](assets/capitulo-02/img-44.png)
+
+<br/>
 
 Yo le puse DataRow porque sí, puedes ponerle el nombre que quieras. Lo importante es que Row es otro Composable, igual que Column.
 
@@ -669,7 +772,11 @@ Dentro de una Row puedes poner cualquier cosa: textos, imágenes, botones, etc. 
     }
 ```
 
+<br/>
+
 ![agregando 3 botones al codigo de composable row](assets/capitulo-02/img-45.png)
+
+<br/>
 
 Esto ya debería mostrarnos tres botones uno al lado del otro 👌 Peeero… falta algo importante.
 
@@ -679,7 +786,11 @@ Esto ya debería mostrarnos tres botones uno al lado del otro 👌 Peeero… fal
 
 Aunque hayas creado DataRows(), si nadie llama a esa función, no aparece en pantalla. Tu Preview probablemente está llamando a MyFirstComposable() (la columna), por eso no ves la Row.
 
+<br/>
+
 ![codigo esta llamando a MyFirstComposable](assets/capitulo-02/img-46.png)
+
+<br/>
 
 Solución: crear otra Preview.
 
@@ -697,11 +808,113 @@ Puedes tener varias previews sin problema. De hecho es súper útil.
     }
 ```
 
+<br/>
+
 ![preview para mi row](assets/capitulo-02/img-47.png)
+
+<br/>
 
 Ahora Compose te mostrará otra vista previa abajo ⬇️ Una preview llama a tu Column, la otra a tu Row.
 
+<br/>
+
 ![preview MyRow](assets/capitulo-02/img-48.png)
+
+<br/><hr/><br/>
+
+## [7. 🎛️ Modifiers y alineaciones en Row](#-índice--capítulo-2-contenedores-en-jetpack-compose)
+
+Al igual que las Column, las Rows también tienen modifier.
+Ejemplo básico:
+
+```kotlin
+Row(
+    modifier = Modifier.fillMaxWidth()
+)
+```
+
+<br/>
+
+![preview MyRow](assets/capitulo-02/img-48.png)
+
+<br/>
+
+Con esto la Row ocupa todo el ancho disponible 📏.
+
+Si quieres que ocupe toda la pantalla:
+
+```kotlin
+Modifier.fillMaxSize()
+```
+
+<br/>
+
+![modifier en Row](assets/capitulo-02/img-49.png)
+
+<br/>
+
+Ya explicamos esto, así que no profundizo más porque ya vimos cómo funcionan los modifiers 😉
+
+<br/>
+
+### 🧭 Alineaciones en Row (importante)
+
+Column y Row tienen propiedades muy parecidas, pero los nombres se invierten según el eje.
+
+- En Column tenemos: verticalArrangement y horizontalAlignment
+
+- En Row tenemos: horizontalArrangement y verticalAlignment
+
+**¿Por qué cambia los atributos según column?**
+Porque Row trabaja de izquierda a derecha → Su eje principal es horizontal. Esto es muy importante para evitar confundirse cuando estés diseñando interfaces.
+
+### 🎯 Aplicando alineación a nuestra Row
+
+Vamos a hacer que los tres botones queden centrados en nuestra pantalla, entonces ponemos el siguiente código y recuerda pulsar [Ctrl+Alt+L] para que se alinee el código:
+
+```kotlin
+    Row(
+        modifier = Modifier.fillMaxSize(),
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.Center
+    ) {
+        Button(onClick = { }) { Text("Botón 1") }
+        Button(onClick = { }) { Text("Botón 2") }
+        Button(onClick = { }) { Text("Botón 3") }
+    }
+```
+
+<br/>
+
+![codigo row](assets/capitulo-02/img-50.png)
+
+<br/>
+
+Con esto: Los botones quedan alineados verticalmente al centro. Y también quedan centrados horizontalmente. Ocupan todo el ancho.
+
+<br/>
+
+![preview row](assets/capitulo-02/img-51.png)
+
+<br/>
+
+**🎯 Centrar elementos dentro de una Row**
+
+Cuando usas horizontalArrangement = Arrangement.Center, tus elementos quedan centrados en la fila. Y sí, esto funciona súper bien para colocar los botones exactamente en el medio 😊
+
+Pero aquí viene un truco que muchos no saben al comienzo:
+
+> **Tip de estudiante:** Si estás dentro de un Row (o cualquier Composable) y haces Ctrl + P, Compose te muestra todos los parámetros disponibles.
+
+<br/>
+
+![consejo de informacion sobre composable](assets/capitulo-02/img-52.png)
+
+<br/>
+
+**Ejemplo**: Ves horizontalArrangement = Arrangement.Start y dices: "Ah ok, empieza con Arrangement, voy a buscar más opciones". Y aparecen Arrangement.Center, Arrangement.End, etc. 🙌
+
+Muy útil cuando recién estás aprendiendo.
 
 <br/><hr/><br/>
 
