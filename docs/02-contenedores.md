@@ -1225,14 +1225,6 @@ Lo pones entre botón y botón. Y ya está. Nos crea un espacio.
 
 <br/>
 
-- **Ejercicio 2:** Crea un preview que muestre algo similar a la siguiente imagen
-
-<br/>
-
-![agregando Spacer](assets/capitulo-02/img-68.png)
-
-<br/>
-
 [Ver solución: en desarrollo]
 
 <br/><hr/><br/>
