@@ -14,7 +14,7 @@
 | [3. 🎨 Creando tu primer Composable y Preview](#3--creando-tu-primer-composable-y-preview)                                                                  | Cómo declarar un Composable, usar `@Preview` y visualizarlo en Android Studio.                                                                         |
 | [4. 🤨 Entendiendo el comportamiento de Compose al organizar componentes](#4--entendiendo-el-comportamiento-de-compose-al-organizar-componentes)            | Cómo Compose posiciona los elementos por defecto y por qué necesitamos contenedores como Box, Column y Row para organizarlos correctamente.            |
 | [5. 📏 Usando Column y modifiers: organizando y dando estilo a tus composables](#5--usando-column-y-modifiers-organizando-y-dando-estilo-a-tus-composables) | Aprende a usar Column junto a modifiers y atributos como `horizontalAlignment`, `verticalArrangement` y `spacedBy` para organizar y alinear elementos. |
-| [6. 🧱↔️ Introduciendo las Rows](#6-🧱↔️-introduciendo-las-rows)                                                                                            | Qué es una Row, cómo funciona como contenedor horizontal y cómo agregar elementos y previews para visualizarla correctamente.                          |
+| [6. 🧱↔️ Introduciendo las Rows](#6-️-introducciendo-las-rows)                                                                                              | Qué es una Row, cómo funciona como contenedor horizontal y cómo agregar elementos y previews para visualizarla correctamente.                          |
 
 <br/><hr/><br/>
 
