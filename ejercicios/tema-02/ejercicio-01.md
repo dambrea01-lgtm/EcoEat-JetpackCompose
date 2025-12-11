@@ -569,6 +569,10 @@ Ahora cada cuadrante tiene un párrafo explicativo centrado (**textAlign = TextA
 
 > Manejar correctamente los **contenedores en Jetpack Compose**, como **Box, Row y Column**, es fundamental para cualquier aplicación. Estos composables son la base de la interfaz, ya que permiten organizar el contenido de manera estructurada y flexible, controlar cómo se distribuyen los elementos en pantalla y definir la jerarquía visual. Saber combinarlos adecuadamente permite crear diseños complejos, adaptables a diferentes tamaños de pantalla y orientaciones. Además, entender cómo funcionan **los pesos (weight)**, el alineamiento (**Alignment**) y los modificadores (**Modifier**) garantiza que tu **UI** sea consistente, mantenible y profesional, lo cual es vital para cualquier app moderna.
 
+<br/>
+
+> [Ver código de la solución del ejercicio](../../src/tema-02/ejercicio-01/MainActivity.kt)
+
 <br/><hr/><br/>
 
 | [⬆️ Ir al inicio del ejercicio](#ejercicio-1-practicando-con-contenedores) | [↩️ Volver al inicio del Proyecto](../../README.md) | [↩️ Volver al Capítulo 2](../../docs/02-contenedores.md) |
