@@ -1225,7 +1225,7 @@ Lo pones entre botón y botón. Y ya está. Nos crea un espacio.
 
 <br/>
 
-![Ver solución del ejercicio 1](../ejercicios/tema-02/ejercicio-01.md)
+> [Ver solución del ejercicio 1](../ejercicios/tema-02/ejercicio-01.md)
 
 <br/><hr/><br/>
 

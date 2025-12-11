@@ -152,9 +152,48 @@ De esta forma ya tenemos el código escrito para que cada vez que modifiques Cua
 
 <br/>
 
-Con esto ya tenemos nuestro entorno preparado para comenzar a desarrollar nuestro ejercicio. Aquí al ser el primer ejercicio de Contenedores, he explicado esto de forma detallada para que no haya duda alguna, pero en los ejercicios no lo voy a explicar tan detallado. Ok, continuamos.
+Con esto ya tenemos nuestro entorno preparado para comenzar a desarrollar nuestro ejercicio. Nuestra @Preview se verá vacia de esta forma:
+
+<br/>
+
+![Preview vacia](img/img-01.png)
+
+<br/>
+
+No te preocupes ahora iremos construyento nuestra aplicación. Esto es solo el inicio, solo hemos construido los cimientos de nuestra app.
+
+<br/>
+
+- Comenzamos construyendo la **columna principal**. Primero necesitamos un contenedor que ocupe toda la pantalla, dentro del cual luego pondremos las filas y las cajas. Para eso usamos un **Column**:
+
+```kotlin
+    @Composable
+    fun CuadrantesPantalla() {
+        Column(modifier = Modifier.fillMaxSize()) {
+            // Aquí iremos añadiendo las filas
+        }
+    }
+```
+
+<br/>
+
+Al escribir este código seguro que se pone Column en rojo junto a una bombilla roja, esto te indica que debes importar el paquete que contine Column. 
+
+**Column** organiza sus elementos verticalmente, uno debajo de otro.
+
+**modifier = Modifier.fillMaxSize()** hace que la columna ocupe todo el ancho y alto de la pantalla.
+
+Por ahora la **Preview** no mostrará nada, pero ya tenemos la base vertical para nuestros cuadrantes.
+
+<br/>
+
+![Preview basica](img/img-02.png)
+
+<br/>
+
+Guarda el archivo y mira la Preview: aunque esté vacía, ya ocupa toda la pantalla.
 
 <br/><hr/><br/>
 
-| [⬆️ Ir al inicio del ejercicio](#ejercicio-1-practicando-con-contenedores) | [↩️ Volver al inicio del Proyecto](../../README.md) | [↩️ Volver al Capítulo 2](../../docs/02-contenedores.mdmd) |
-| :------------------------------------------------------------------------: | :-------------------------------------------------: | :--------------------------------------------------------: |
+| [⬆️ Ir al inicio del ejercicio](#ejercicio-1-practicando-con-contenedores) | [↩️ Volver al inicio del Proyecto](../../README.md) | [↩️ Volver al Capítulo 2](../../docs/02-contenedores.md) |
+| :------------------------------------------------------------------------: | :-------------------------------------------------: | :------------------------------------------------------: |
