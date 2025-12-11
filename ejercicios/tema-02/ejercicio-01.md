@@ -152,7 +152,7 @@ De esta forma ya tenemos el código escrito para que cada vez que modifiques Cua
 
 <br/>
 
-Con esto ya tenemos nuestro entorno preparado para comenzar a desarrollar nuestro ejercicio. Nuestra @Preview se verá vacia de esta forma:
+Con esto ya tenemos nuestro entorno preparado para comenzar a desarrollar nuestro ejercicio. Nuestra **@Preview** se verá vacia de esta forma:
 
 <br/>
 
@@ -177,7 +177,7 @@ No te preocupes ahora iremos construyento nuestra aplicación. Esto es solo el i
 
 <br/>
 
-Al escribir este código seguro que se pone Column en rojo junto a una bombilla roja, esto te indica que debes importar el paquete que contine Column. 
+Al escribir este código seguro que se pone **Column en rojo** junto a una **bombilla roja**, esto te indica que debes importar el paquete que contine Column.
 
 **Column** organiza sus elementos verticalmente, uno debajo de otro.
 
@@ -192,6 +192,382 @@ Por ahora la **Preview** no mostrará nada, pero ya tenemos la base vertical par
 <br/>
 
 Guarda el archivo y mira la Preview: aunque esté vacía, ya ocupa toda la pantalla.
+
+<br/>
+
+- Añadimos la **primera fila** (la mitad superior): Queremos dividir la pantalla verticalmente en dos partes iguales: fila superior y fila inferior. Para eso añadimos una **Row** dentro de la **Column**:
+
+<br/>
+
+```kotlin
+    @Composable
+    fun CuadrantesPantalla() {
+        Column(modifier = Modifier.fillMaxSize()) {
+            Row(modifier = Modifier.weight(1f)) {
+                // Aquí irán los dos cuadrantes de arriba
+            }
+            // La fila de abajo la añadiremos después
+        }
+    }
+```
+
+<br/>
+
+Explico lo nuevo que hemos agregado. **Row** organiza sus elementos horizontalmente, uno al lado del otro.
+
+**modifier = Modifier.weight(1f)** indica que esta fila ocupará una **fracción del espacio** disponible en la columna.
+
+Cuando añadamos otra fila con **weight(1f)** debajo, ambas filas se repartirán la pantalla **50/50** verticalmente.
+
+Si miras la Preview: continua visualmente sin cambios, pero ya tenemos la estructura vertical preparada, aunque todavía no hay colores ni texto.
+
+<br/>
+
+- Añadimos el **primer cuadrante: superior izquierdo (verde)**: Dentro de la fila que acabamos de crear, añadimos un Box que será nuestro primer cuadrante:
+
+```kotlin
+    @Composable
+    fun CuadrantesPantalla() {
+        Column(modifier = Modifier.fillMaxSize()) {
+            Row(modifier = Modifier.weight(1f)) {
+                Box(
+                    modifier = Modifier
+                        .weight(1f)
+                        .fillMaxSize()
+                        .background(Color.Green),
+                    contentAlignment = Alignment.Center
+                ) {
+                    Text("Verde")
+                }
+                // Aquí irá el cuadrante superior derecho
+            }
+        }
+    }
+```
+
+<br/>
+
+Explicamos lo que hemos agregado: **Box** es un contenedor flexible que podemos usar para dibujar colores y centrar contenido.
+
+**weight(1f)** reparte el espacio horizontal de la fila (en este caso ocupará la mitad).
+
+**fillMaxSize()** hace que el Box use todo el espacio de su celda.
+
+**contentAlignment = Alignment.Center** centra el texto dentro del cuadrante.
+
+En este momento, la **Preview** solo muestra un cuadrante verde completo porque dentro de la columna hemos creado una sola fila (**Row**) y dentro de esa fila solo hay un **Box**. Como ese **Box** ocupa toda la fila (con **fillMaxSize()** y **weight(1f)**), la fila aparece completamente verde y no se ve ningún otro cuadrante. La fila inferior todavía no existe, y tampoco hemos añadido un segundo **Box** en la fila superior, por eso por ahora la pantalla parece un único cuadrante verde.
+
+<br/>
+
+![Preview primer cuadrante, todo verde](img/img-03.png)
+
+<br/>
+
+- Ahora añadimos el **segundo cuadrante** de la **fila superior** para que la fila se divida en dos partes iguales. Así podrás ver dos cuadrados juntos en la Preview.
+
+```kotlin
+    @Composable
+    fun CuadrantesPantalla() {
+        Column(modifier = Modifier.fillMaxSize()) {
+            Row(modifier = Modifier.weight(1f)) {
+                Box(
+                    modifier = Modifier
+                        .weight(1f)
+                        .fillMaxSize()
+                        .background(Color.Green),
+                    contentAlignment = Alignment.Center
+                ) {
+                    Text("Verde")
+                }
+
+                Box(
+                    modifier = Modifier
+                        .weight(1f)
+                        .fillMaxSize()
+                        .background(Color.Yellow),
+                    contentAlignment = Alignment.Center
+                ) {
+                    Text("Amarillo")
+                }
+            }
+            // La fila inferior la añadiremos después
+        }
+    }
+```
+
+<br/>
+
+Explicamos que hemos agregado: Ahora la **fila superior** tiene **dos Box**, cada uno con **weight(1f)**, así que se reparten la fila **50/50 horizontalmente**.
+
+**Box** de la izquierda: verde con texto **“Verde”**.
+
+**Box** de la derecha: amarillo con texto **“Amarillo”**.
+
+Ahora, en la **Preview**, la fila superior está dividida en dos cuadrados horizontales: el verde a la izquierda y el amarillo a la derecha. Cada **Box** ocupa la mitad del ancho de la pantalla gracias a **weight(1f)** dentro de la **Row**, y ambos llenan toda la altura de la fila (que por ahora ocupa toda la pantalla porque todavía no hemos añadido la **fila inferior**). Por eso, visualmente, la pantalla aparece completamente ocupada, con verde en la mitad izquierda y amarillo en la mitad derecha, de arriba hacia abajo, y los textos centrados en cada cuadrante. La mitad “inferior” que queremos crear después aún no existe como fila separada, por eso todavía no hay cuadrados en esa parte.
+
+<br/>
+
+![Preview primer y segundo cuadrante](img/img-04.png)
+
+<br/>
+
+- Ahora agregamos solo la segunda fila, sin los cuadros dentro aún, para que veas cómo afecta la Preview.
+
+```kotlin
+    @Composable
+    fun CuadrantesPantalla() {
+        Column(modifier = Modifier.fillMaxSize()) {
+            // Fila superior
+            Row(modifier = Modifier.weight(1f)) {
+                Box(
+                    modifier = Modifier
+                        .weight(1f)
+                        .fillMaxSize()
+                        .background(Color.Green),
+                    contentAlignment = Alignment.Center
+                ) {
+                    Text("Verde")
+                }
+
+                Box(
+                    modifier = Modifier
+                        .weight(1f)
+                        .fillMaxSize()
+                        .background(Color.Yellow),
+                    contentAlignment = Alignment.Center
+                ) {
+                    Text("Amarillo")
+                }
+            }
+
+            // Fila inferior (vacía por ahora)
+            Row(modifier = Modifier.weight(1f)) {
+                // Aquí añadiremos los dos cuadrantes inferiores después
+            }
+        }
+    }
+```
+
+<br/>
+
+Al agregar esta **segunda fila** vacía con **weight(1f)**, ahora la **fila superior** con verde y amarillo ocupa solo la mitad superior de la pantalla, y la **segunda fila** ocupa la mitad inferior, aunque todavía esté **vacía** y no tenga color.
+
+<br/>
+
+![Preview agregando la segunda fila](img/img-05.png)
+
+<br/>
+
+La **Preview** ya muestra cómo la pantalla se divide verticalmente en dos partes iguales, dejando espacio para los cuadrantes inferiores que añadiremos a continuación.
+
+- Ahora vamos a añadir solo el tercer cuadrante (la mitad inferior izquierda, color celeste) para ir viendo cómo afecta la Preview paso a paso.
+
+```kotlin
+    @Composable
+    fun CuadrantesPantalla() {
+        Column(modifier = Modifier.fillMaxSize()) {
+            // Fila superior
+            Row(modifier = Modifier.weight(1f)) {
+                Box(
+                    modifier = Modifier
+                        .weight(1f)
+                        .fillMaxSize()
+                        .background(Color.Green),
+                    contentAlignment = Alignment.Center
+                ) {
+                    Text("Verde")
+                }
+
+                Box(
+                    modifier = Modifier
+                        .weight(1f)
+                        .fillMaxSize()
+                        .background(Color.Yellow),
+                    contentAlignment = Alignment.Center
+                ) {
+                    Text("Amarillo")
+                }
+            }
+
+            // Fila inferior
+            Row(modifier = Modifier.weight(1f)) {
+                Box(
+                    modifier = Modifier
+                        .weight(1f)
+                        .fillMaxSize()
+                        .background(Color.Cyan),
+                    contentAlignment = Alignment.Center
+                ) {
+                    Text("Celeste")
+                }
+
+                // Aquí irá el cuarto cuadrante
+            }
+        }
+    }
+```
+
+<br/>
+
+Al añadir solo este tercer cuadrante dentro de la **segunda fila**, como es el único **Box** dentro de esa fila, ocupa toda la mitad inferior de la pantalla, no solo la izquierda. La **fila superior** sigue dividida en verde y amarillo, pero la **fila inferior** ahora se pinta completamente de celeste, con el texto centrado. La mitad derecha inferior todavía no existe como un cuadrante separado, así que visualmente la fila inferior aparece entera en celeste, aunque luego añadiremos el cuarto cuadrante para dividirla en dos.
+
+<br/>
+
+![Preview agregando tercer cuadrante](img/img-06.png)
+
+<br/>
+
+- Ahora añadimos el cuarto cuadrante (la mitad inferior derecha, color gris) para completar los 4 cuadrados de la pantalla.
+
+```kotlin
+    @Composable
+    fun CuadrantesPantalla() {
+        Column(modifier = Modifier.fillMaxSize()) {
+            // Fila superior
+            Row(modifier = Modifier.weight(1f)) {
+                Box(
+                    modifier = Modifier
+                        .weight(1f)
+                        .fillMaxSize()
+                        .background(Color.Green),
+                    contentAlignment = Alignment.Center
+                ) {
+                    Text("Verde")
+                }
+
+                Box(
+                    modifier = Modifier
+                        .weight(1f)
+                        .fillMaxSize()
+                        .background(Color.Yellow),
+                    contentAlignment = Alignment.Center
+                ) {
+                    Text("Amarillo")
+                }
+            }
+
+            // Fila inferior
+            Row(modifier = Modifier.weight(1f)) {
+                Box(
+                    modifier = Modifier
+                        .weight(1f)
+                        .fillMaxSize()
+                        .background(Color.Cyan),
+                    contentAlignment = Alignment.Center
+                ) {
+                    Text("Celeste")
+                }
+
+                Box(
+                    modifier = Modifier
+                        .weight(1f)
+                        .fillMaxSize()
+                        .background(Color.Gray),
+                    contentAlignment = Alignment.Center
+                ) {
+                    Text("Gris")
+                }
+            }
+        }
+    }
+```
+
+<br>
+
+Con este cuarto cuadrante añadido, la **Preview** ahora muestra la pantalla completamente dividida en 4 cuadrantes iguales: la **fila superior** tiene verde a la izquierda y amarillo a la derecha, y la **fila inferior** tiene celeste a la izquierda y gris a la derecha. Cada fila ocupa la mitad de la pantalla verticalmente, y cada cuadrante dentro de la fila ocupa la mitad horizontal, logrando así una **cuadrícula 2x2** que cubre toda la pantalla, con los **textos centrados** en cada color.
+
+<br/>
+
+![Preview agregando cuarto cuadrante](img/img-07.png)
+
+<br/>
+
+Vamos a reemplazar los textos simples por un párrafo en cada cuadrante, donde cada párrafo sea como una definición de lo que representa el contenedor.
+
+```kotlin
+    @Composable
+    fun CuadrantesPantalla() {
+        Column(modifier = Modifier.fillMaxSize()) {
+            // Fila superior
+            Row(modifier = Modifier.weight(1f)) {
+                Box(
+                    modifier = Modifier
+                        .weight(1f)
+                        .fillMaxSize()
+                        .background(Color.Green),
+                    contentAlignment = Alignment.Center
+                ) {
+                    Text(
+                        "Este contenedor representa la parte superior izquierda. Usamos Box para colocar contenido y darle un color de fondo.",
+                        color = Color.Black,
+                        textAlign = TextAlign.Center,
+                        modifier = Modifier.padding(8.dp)
+                    )
+                }
+
+                Box(
+                    modifier = Modifier
+                        .weight(1f)
+                        .fillMaxSize()
+                        .background(Color.Yellow),
+                    contentAlignment = Alignment.Center
+                ) {
+                    Text(
+                        "Este contenedor representa la parte superior derecha. Es otra Box que ocupa la mitad de la fila y tiene un fondo amarillo.",
+                        color = Color.Black,
+                        textAlign = TextAlign.Center,
+                        modifier = Modifier.padding(8.dp)
+                    )
+                }
+            }
+
+            // Fila inferior
+            Row(modifier = Modifier.weight(1f)) {
+                Box(
+                    modifier = Modifier
+                        .weight(1f)
+                        .fillMaxSize()
+                        .background(Color.Cyan),
+                    contentAlignment = Alignment.Center
+                ) {
+                    Text(
+                        "Este contenedor representa la parte inferior izquierda. Aquí usamos Box para practicar cómo centrar contenido en Compose.",
+                        color = Color.Black,
+                        textAlign = TextAlign.Center,
+                        modifier = Modifier.padding(8.dp)
+                    )
+                }
+
+                Box(
+                    modifier = Modifier
+                        .weight(1f)
+                        .fillMaxSize()
+                        .background(Color.Gray),
+                    contentAlignment = Alignment.Center
+                ) {
+                    Text(
+                        "Este contenedor representa la parte inferior derecha. Se muestra cómo un Box puede contener texto y un color de fondo diferente.",
+                        color = Color.Black,
+                        textAlign = TextAlign.Center,
+                        modifier = Modifier.padding(8.dp)
+                    )
+                }
+            }
+        }
+    }
+```
+
+<br/>
+
+Ahora cada cuadrante tiene un párrafo explicativo centrado (**textAlign = TextAlign.Center**) y el texto es todo negro. Cada **Box** sigue ocupando la mitad horizontal de su fila, y cada **fila** ocupa la mitad de la pantalla verticalmente, manteniendo la **cuadrícula 2x2** completa. El **contentAlignment = Alignment.Center** asegura que el texto esté centrado vertical y horizontalmente dentro de cada cuadrante, haciendo que la interfaz se vea limpia y equilibrada.
+
+<br/>
+
+![Preview ejercicio finalizado](img/img-08.png)
+
+<br/>
+
+> Manejar correctamente los **contenedores en Jetpack Compose**, como **Box, Row y Column**, es fundamental para cualquier aplicación. Estos composables son la base de la interfaz, ya que permiten organizar el contenido de manera estructurada y flexible, controlar cómo se distribuyen los elementos en pantalla y definir la jerarquía visual. Saber combinarlos adecuadamente permite crear diseños complejos, adaptables a diferentes tamaños de pantalla y orientaciones. Además, entender cómo funcionan **los pesos (weight)**, el alineamiento (**Alignment**) y los modificadores (**Modifier**) garantiza que tu **UI** sea consistente, mantenible y profesional, lo cual es vital para cualquier app moderna.
 
 <br/><hr/><br/>
 
