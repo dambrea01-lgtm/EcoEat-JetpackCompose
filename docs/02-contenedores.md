@@ -1227,7 +1227,7 @@ Lo pones entre botón y botón. Y ya está. Nos crea un espacio.
 
 <br/>
 
-> [Ver solución del ejercicio 1: explicado paso a paso](../ejercicios/tema-02/ejercicio-01.md)
+> [👉 Ver solución del ejercicio 1: explicado paso a paso 👈](../ejercicios/tema-02/ejercicio-01.md)
 
 > [Ir directamente al código del ejercicio resuelto](../src/tema-02/ejercicio-01/MainActivity.kt)
 
@@ -1241,7 +1241,7 @@ Lo pones entre botón y botón. Y ya está. Nos crea un espacio.
 
 <br/>
 
-> [Ver solución del ejercicio 1: explicado paso a paso](../ejercicios/tema-02/ejercicio-02.md)
+> [👉 Ver solución del ejercicio 2: explicado paso a paso 👈](../ejercicios/tema-02/ejercicio-02.md)
 
 > [Ir directamente al código del ejercicio resuelto](../src/tema-02/ejercicio-02/MainActivity.kt)
 
