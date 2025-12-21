@@ -9,14 +9,14 @@
 
 ![Preview ejercicio](img/img-25.png)
 
-[Necesitaras esta imagen compose_header.png](../tema-02/resource/compose_header.png)
-[Necesitaras esta imagen avatar.png](../tema-02/resource/avatar.png)
+- [Necesitaras esta imagen compose_header.png](../tema-02/resource/compose_header.png)
+- [Necesitaras esta imagen avatar.png](../tema-02/resource/avatar.png)
 
 **Solución:**
 
 <br/>
 
-> [Ver código de la solución del ejercicio](../../src/tema-02/ejercicio-02/MainActivity.kt)
+> 👉 [Ver código de la solución del ejercicio](../../src/tema-02/ejercicio-02/MainActivity.kt)👈
 
 <br/>
 
@@ -36,7 +36,9 @@
 
 Ahora estamos listos para empezar desde cero.
 
-> **Crear nuestro Composable principal:** En **Jetpack Compose**, todo lo que se dibuja en pantalla se hace dentro de una **función composable**, que se anota con **@Composable**.
+<br/>
+
+> 👉 **Creamos nuestro Composable principal:** En **Jetpack Compose**, todo lo que se dibuja en pantalla se hace dentro de una **función composable**, que se anota con **@Composable**.
 
 Vamos a crear nuestro **composable principal** para esta pantalla:
 
@@ -55,7 +57,9 @@ Vamos a crear nuestro **composable principal** para esta pantalla:
 
 Por ahora, la función está vacía. Más adelante añadiremos imágenes, textos y botones.
 
-> **Crear la Preview**
+<br/>
+
+> 👉 **Creamos la Preview**
 
 Para ver los cambios mientras desarrollamos, usamos un **composable de Preview**. Esto nos permite ver la **UI** en el editor de Android Studio sin tener que correr la app en un emulador o dispositivo físico.
 
@@ -81,7 +85,9 @@ Vamos a crear un **preview** para nuestro **ScreenBox002()**:
 **showSystemUi = true**: hace que la Preview muestre toda la pantalla, incluyendo barra de estado y navegación, para ver cómo se verá la app completa.
 **ScreenBox002Preview():** dentro llamamos a nuestro composable principal, de esta manera, cualquier cambio que hagamos en ScreenBox002() se reflejará automáticamente en la Preview.
 
-> **Cómo funciona la Preview:** Ahora que tenemos nuestro composable y la Preview. Cada vez que modifiquemos **ScreenBox002()**, la Preview se actualizará automáticamente. Nos permite ver el progreso de la UI paso a paso sin necesidad de ejecutar la app. Es ideal para practicar y experimentar con distintos layouts y elementos visuales.
+<br/>
+
+> 👉 **Cómo funciona la Preview:** Ahora que tenemos nuestro composable y la Preview. Cada vez que modifiquemos **ScreenBox002()**, la Preview se actualizará automáticamente. Nos permite ver el progreso de la UI paso a paso sin necesidad de ejecutar la app. Es ideal para practicar y experimentar con distintos layouts y elementos visuales.
 
 El Código completo hasta ahora
 
@@ -108,7 +114,9 @@ El Código completo hasta ahora
     }
 ```
 
-> **Ver la Preview en Android Studio:** Una vez que hemos creado nuestro `@Composable` y su correspondiente `@Preview`, es importante saber **cómo visualizarla correctamente en Android Studio**.
+<br/>
+
+> 👉 **Ver la Preview en Android Studio:** Una vez que hemos creado nuestro `@Composable` y su correspondiente `@Preview`, es importante saber **cómo visualizarla correctamente en Android Studio**.
 
 Para ver la Preview:
 
@@ -122,7 +130,9 @@ Esto dividirá la pantalla en dos:
 
 De esta forma podremos ir **programando y viendo los cambios en tiempo real**, lo cual es una de las grandes ventajas de Jetpack Compose.
 
-> **¿No aparece la Preview?**
+<br/>
+
+> 👉 **¿No aparece la Preview?**
 
 A veces la Preview no se muestra automáticamente. Si esto ocurre:
 
@@ -140,21 +150,27 @@ Gracias a la Preview podemos:
 
 A partir de ahora, **cada cambio que hagamos en `ScreenBox002()` se reflejará directamente en la Preview**, lo que nos permitirá avanzar paso a paso en el diseño de nuestra pantalla.
 
-> **Creando el contenedor principal: Box**
+<br/>
+
+> 👉 **Creamos el contenedor principal: Box**
 
 Si observamos (o intuimos) el diseño final que queremos construir, nos damos cuenta de algo importante:
 
-👉 **Todos los componentes de la pantalla están contenidos dentro de un solo contenedor principal**, y dentro de este se organizan de forma vertical.
+**Todos los componentes de la pantalla están contenidos dentro de un solo contenedor principal**, y dentro de este se organizan de forma vertical.
 
-En Jetpack Compose, una muy buena forma de hacer esto es usando un **Box** como contenedor raíz y, dentro de él, una **Column** para ordenar los elementos uno debajo del otro.
+En **Jetpack Compose**, una muy buena forma de hacer esto es usando un **Box** como contenedor raíz y, dentro de él, una **Column** para ordenar los elementos uno debajo del otro.
 
-> **🧱 ¿Por qué usar Box?**
+<br/>
+
+> 👉 **🧱 ¿Por qué usar Box?**
 
 - `Box` es un contenedor flexible.
 - Nos permite superponer elementos si lo necesitamos más adelante.
 - Es ideal como contenedor principal que ocupa toda la pantalla.
 
-> **Añadiendo el Box dentro de `ScreenBox002()`**
+<br/>
+
+> 👉 **Añadimos el Box dentro de `ScreenBox002()`**
 
 Vamos ahora a modificar nuestro composable principal `ScreenBox002()` y añadir un `Box`.
 
@@ -177,9 +193,13 @@ Importamos:
     import androidx.compose.foundation.layout.Box
 ```
 
-> **Haciendo que el Box ocupe toda la pantalla:** Nuestro Box debe ocupar todo el ancho y alto de la pantalla, ya que será el contenedor principal de la UI.
+<br/>
 
-Para eso usamos un **Modifier** con **fillMaxSize():**
+> 👉 **Hacemos que el Box ocupe toda la pantalla**
+
+Nuestro contenedor Box debe ocupar todo el ancho y alto de la pantalla, ya que será el contenedor principal de la UI.
+
+Para eso usamos un **Modifier** con **fillMaxSize()** de la siguiente forma:
 
 ```kotlin
     @Composable
@@ -201,28 +221,38 @@ Para eso usamos un **Modifier** con **fillMaxSize():**
 
 **⚠️ Importante:** Asegúrate de importar siempre los componentes desde los paquetes de Jetpack Compose y no desde otros paquetes incorrectos. Android Studio normalmente sugiere el correcto, pero es bueno revisarlo.
 
-> **🔍 ¿Qué hemos logrado hasta ahora?**
+<br/>
+
+> 👉 **🔍 ¿Qué hemos logrado hasta ahora?**
 
 Creamos un Box como contenedor principal. El Box ocupa toda la pantalla gracias a Modifier.fillMaxSize(). Todavía no se ve nada en la Preview, pero ya tenemos la base estructural de nuestra pantalla.
 
-Esto es completamente normal: 👉 Primero construimos la estructura, luego el contenido.
+Esto es completamente normal: Primero construimos la estructura, luego el contenido.
 
-> **Centramos todo el contenido dentro del Box:** Si observamos bien el diseño que queremos construir, notamos algo importante. 👉 **Todo el contenido de la pantalla está centrado**.
+<br/>
+
+> 👉 **Centramos todo el contenido dentro del Box:**
+
+Si observamos bien el diseño que queremos construir, notamos algo importante. **Todo el contenido de la pantalla está centrado**.
 
 Como nuestro `Box` es el contenedor principal y ocupa toda la pantalla, podemos aprovechar una de sus grandes ventajas: el parámetro **contentAlignment**.
 
-> **🎯 ¿Qué es contentAlignment ?**
+<br/>
 
-- **contentAlignment** indica **cómo se posiciona el contenido dentro del Box**.
+> 👉 **🎯 ¿Qué es contentAlignment ?**
+
+- **contentAlignment** indica **cómo se posiciona el contenido dentro del contenedor Box**.
 - Al usar `Alignment.Center`, todo lo que esté dentro del `Box` se centrará automáticamente:
   - Horizontalmente
   - Verticalmente
 
 Esto nos ahorra tener que centrar cada elemento individualmente.
 
-> **Añadimos `contentAlignment` al Box**
+<br/>
 
-Modificamos nuestro `Box` de la siguiente forma:
+> 👉 **Añadimos `contentAlignment` al Box**
+
+Modificamos nuestro contenedor `Box` de la siguiente forma:
 
 ```kotlin
     @Composable
@@ -242,18 +272,21 @@ Modificamos nuestro `Box` de la siguiente forma:
     import androidx.compose.ui.Alignment
 ```
 
-> **🔍 ¿Qué cambia ahora?**
+<br/>
 
-Todo el contenido que coloquemos dentro del Box aparecerá centrado. No importa si luego añadimos una Column, imágenes, textos o botones:
-👉 todo quedará centrado automáticamente dentro de la pantalla.
+> 👉 **🔍 ¿Qué cambia ahora?**
+
+Todo el contenido que coloquemos dentro del contenedor de tipo Box aparecerá centrado. No importa si luego añadimos una Column, imágenes, textos o botones: todo quedará centrado automáticamente dentro de la pantalla.
 
 Nuestra UI empieza a tomar forma incluso antes de añadir los componentes visibles.
 
-> **Ahora agregamos una Column dentro del Box:**
+<br/>
+
+> 👉 **Ahora agregamos una Column dentro del Box:**
 
 Si analizamos bien la estructura de nuestra pantalla, nos damos cuenta de algo clave:
 
-👉 **Todo el contenido está organizado de arriba hacia abajo**.
+**Todo el contenido está organizado de arriba hacia abajo**.
 
 Por ejemplo:
 
@@ -264,7 +297,9 @@ Por ejemplo:
 
 Esto nos indica claramente que necesitamos una **Column**, ya que `Column` organiza los elementos **uno debajo del otro** de forma vertical.
 
-> **Creamos la Column dentro del Box**
+<br/>
+
+> 👉 **Creamos la Column dentro del Box**
 
 Dentro del `Box`, añadimos una `Column`:
 
@@ -288,7 +323,9 @@ Al escribir **Column**, Android Studio lo marcará en rojo, lo que significa que
     import androidx.compose.foundation.layout.Column
 ```
 
-> **Continuamos ajustando el tamaño de la Column:** No queremos que la Column ocupe toda la pantalla, solo necesitamos que ocupe todo el ancho, y que su altura se adapte al contenido.
+> 👉 **Continuamos ajustando el tamaño de la Column:**
+
+No queremos que la Column ocupe toda la pantalla, solo necesitamos que ocupe todo el ancho, y que su altura se adapte al contenido.
 
 Por eso añadimos el siguiente modificador:
 
@@ -302,7 +339,8 @@ Por eso añadimos el siguiente modificador:
 
 Esto significa:
 
-**fillMaxWidth()** → ocupa todo el ancho de la pantalla.
+- **fillMaxWidth()** → ocupa todo el ancho de la pantalla.
+
 La altura se ajusta automáticamente al contenido.
 
 También necesitamos importar:
@@ -311,20 +349,26 @@ También necesitamos importar:
     import androidx.compose.foundation.layout.fillMaxWidth
 ```
 
-> **Añadimos el primer componente: una Image**
+<br/>
+
+> 👉 **Añadimos el primer componente: una Image**
 
 Ahora empezamos a añadir contenido real. El primer componente será una imagen situada en la parte superior. En Jetpack Compose, las imágenes se muestran usando el composable **Image**.
 
-👉 Todo en **Jetpack Compose** es un **composable**, y Image no es la excepción.
+Prácticamente todo en **Jetpack Compose** es un **composable**, y Image no es la excepción.
 
-> **🖼️ Atributos obligatorios de Image**
+<br/>
+
+> 👉 **Atributos obligatorios de Image**
 
 El composable Image nos exige dos parámetros obligatorios:
 
-**painter →** indica qué imagen se va a cargar.
-**contentDescription →** descripción de la imagen (importante para accesibilidad).
+- **painter →** indica qué imagen se va a cargar.
+- **contentDescription →** descripción de la imagen (importante para accesibilidad).
 
-> **Cargando una imagen desde drawable**
+<br/>
+
+> 👉 **Cargamos una imagen desde drawable**
 
 Para cargar una imagen local, usamos:
 
@@ -334,7 +378,7 @@ Para cargar una imagen local, usamos:
 
 Esto indica que la imagen se obtiene desde los recursos del proyecto.
 
-> **📁 ¿Dónde van las imágenes?**
+**📁 ¿Dónde van las imágenes?**
 
 Las imágenes deben estar en la carpeta:
 
@@ -348,7 +392,9 @@ Para este ejercicio: Descargamos la siguiente imagen
 
 La copiamos y pegamos dentro de la carpeta drawable.
 
-> **Accedemos a la imagen con la clase R**
+<br/>
+
+> 👉 **Accedemos a la imagen con la clase R**
 
 Para acceder a los recursos usamos la clase R.
 
@@ -360,7 +406,9 @@ La imagen se referencia así:
 
 ⚠️ Nota: No se escribe .png al final. Android genera automáticamente esta referencia.
 
-> **Entonces ya podemos añadir la Image dentro de la Column**
+<br/>
+
+> 👉 **Entonces ya podemos añadir la Image dentro de la Column**
 
 Ahora sí, añadimos la imagen dentro de la Column:
 
@@ -388,10 +436,11 @@ Y también la clase R:
     import com.example.box002.R
 ```
 
-(El paquete puede variar según el nombre de tu proyecto).
+🔄 Problema común: la imagen no aparece cuando agregamos una imagen al preview.
 
-🔄 Problema común: la imagen no aparece Si la imagen no se carga o aparece un error.
-👉 Ve a la parte superior derecha de Android Studio y pulsa Refresh 🔄.
+Si la imagen no se carga o aparece un error.
+
+Ve a la parte superior derecha de Android Studio y pulsa Refresh 🔄. Justo encima de la ventana del preview.
 
 Esto suele pasar porque Android Studio a veces no detecta automáticamente las imágenes nuevas en drawable. Después de refrescar, la Preview debería mostrar la imagen correctamente.
 
@@ -418,7 +467,9 @@ Esto suele pasar porque Android Studio a veces no detecta automáticamente las i
     }
 ```
 
-> **Ajustamos el tamaño y la posición de la Image**
+<br/>
+
+> 👉 **Ajustamos el tamaño y la posición de la Image**
 
 Ahora que ya vemos la imagen en pantalla, nos damos cuenta de varias cosas:
 
@@ -430,7 +481,9 @@ Ahora que ya vemos la imagen en pantalla, nos damos cuenta de varias cosas:
 
 En Jetpack Compose, al igual que `Box` y `Column`, **`Image` también acepta modificadores**, ya que es un composable más.
 
-> **Modificando el tamaño de la Image**
+<br/>
+
+> 👉 **Modificando el tamaño de la Image**
 
 Vamos a añadir un `Modifier` a la `Image` para:
 
@@ -456,7 +509,7 @@ Es importante recordar:
 - **dp →** se usa para tamaños, márgenes, paddings, alturas, anchos, etc.
 - **sp →** se usa exclusivamente para texto (tamaño de fuente).
 
-👉 Todo lo que no sea texto, usa dp.
+Todo lo que no sea texto, usa dp.
 
 📦 Importaciones necesarias: Al usar height y dp, Android Studio nos pedirá importar:
 
@@ -469,15 +522,15 @@ Con estos cambios: La imagen ahora ocupa todo el ancho. Tiene una altura visible
 
 ![Preview con la imagen centrada y ampliada](img/img-11.png)
 
-> **Tenemos que añadir padding al contenedor principal**
+<br/>
+
+> 👉 **Tenemos que añadir padding al contenedor principal**
 
 Si observamos el diseño del ejercicio, notamos que: La imagen tiene espacio alrededor. Los demás componentes también necesitan ese mismo espacio. No queremos que el contenido quede pegado a los bordes de la pantalla.
 
-En **Jetpack Compose** no existe el concepto de **margin** como tal.
+En **Jetpack Compose** no existe el concepto de **margin** como tal. Todo se trabaja con **padding**.
 
-👉 Todo se trabaja con **padding**.
-
-> **Aplicamos padding al Box**
+**Aplicamos padding al Box**
 
 Como el Box es el contenedor principal, lo más lógico es aplicar el padding ahí, para que todos los componentes internos se beneficien de él.
 
@@ -494,19 +547,21 @@ Modificamos el Box de esta forma:
     }
 ```
 
-📦 Importación necesaria. Este ejercicio al ser uno de los primeros del tutorial te estoy remarcando todas las importaciones, pero hay que coger el hábito de importar a medida que te lo vaya indicando Android Studio.
+📦 Importación necesaria.
+
+Este ejercicio al ser uno de los primeros del tutorial te estoy remarcando todas las importaciones, pero hay que coger el hábito de importar a medida que te lo vaya indicando Android Studio.
 
 ```kotlin
     import androidx.compose.foundation.layout.padding
 ```
 
-🔍 ¿Qué logramos con esto?
+**🔍 ¿Qué logramos con esto?**
 
 Todo el contenido tiene un espacio interno uniforme. La UI se ve más limpia y profesional. No necesitamos añadir padding individual a cada componente (por ahora).
 
 ![Preview con la imagen centrada y ampliada](img/img-12.png)
 
-> **Estado actual del código:** Así queda nuestro ScreenBox002() hasta este punto
+**Estado actual del código:** Así queda nuestro ScreenBox002() hasta este punto
 
 ```kotlin
     @Composable
@@ -533,11 +588,13 @@ Todo el contenido tiene un espacio interno uniforme. La UI se ve más limpia y p
     }
 ```
 
-> **Continuamos agregando una fila (Row) con avatar y texto**
+<br/>
+
+> 👉 **Continuamos agregando una fila (Row) con avatar y texto**
 
 Si seguimos observando el diseño del ejercicio, vemos que **debajo de la imagen principal** aparece una nueva sección:
 
-👉 Una **fila** con:
+Una **fila** con:
 
 - **A la izquierda:** una imagen pequeña en forma circular (avatar).
 - **A la derecha:** un texto.
@@ -550,7 +607,9 @@ Aquí es donde empezamos a **combinar contenedores**, algo fundamental en Jetpac
 
 Este ejercicio es muy bueno para entender cómo se combinan entre sí.
 
-> **Creamos la Row debajo de la Image**
+<br/>
+
+> 👉 **Creamos la Row debajo de la Image**
 
 Dentro de la `Column`, justo debajo de la imagen principal, añadimos una `Row`:
 
@@ -562,15 +621,15 @@ Dentro de la `Column`, justo debajo de la imagen principal, añadimos una `Row`:
 
 Al escribir **Row**, Android Studio lo marcará en rojo, lo cual nos recuerda algo importante:
 
-👉 Siempre que uses un nuevo composable, debes importar su paquete.
-
-Importamos:
+Siempre que uses un nuevo composable, debes importar su paquete. Importamos ahora lo siguiente:
 
 ```kotlin
     import androidx.compose.foundation.layout.Row
 ```
 
-> **Añadimos la imagen del avatar**
+<br/>
+
+> 👉 **Añadimos la imagen del avatar**
 
 Al igual que hicimos antes con la imagen principal, necesitamos:
 
@@ -597,15 +656,15 @@ Luego, dentro de la Row, añadimos la imagen:
 
 Como ya sabemos, es posible que la **Preview** no se refresque automáticamente al añadir una nueva imagen.
 
-👉 Si no aparece:
-
-Ve arriba a la derecha y pulsa **Refresh** 🔄
+Si no aparece la imagen: Ve arriba a la derecha y pulsa **Refresh** 🔄
 
 Después de eso, deberías ver el avatar debajo de la imagen principal.
 
 ![Preview con la imagen principal y la imagen avatar](img/img-13.png)
 
-> **Ahora agregamos el texto al lado del avatar**
+<br/>
+
+> 👉 **Ahora agregamos el texto al lado del avatar**
 
 Como estamos dentro de una Row, todo lo que pongamos se colocará uno al lado del otro.
 
@@ -636,22 +695,22 @@ Con esto ya tenemos: Imagen a la izquierda y texto a la derecha
 
 Pero todavía no se ve como queremos.
 
-> **Por lo tanto, tenemos que ajustar la imagen del avatar (tamaño y forma circular)**
+<br/>
+
+> 👉 **Tenemos que ajustar la imagen del avatar (tamaño y forma circular)**
 
 Ahora vamos a mejorar el avatar.
 
-📐 Cambiar el tamaño
-Le damos un tamaño fijo de 50.dp:
+📐 Cambiamos el tamaño: Le damos un tamaño fijo de 50.dp
 
 ```kotlin
     Modifier.size(50.dp)
 ```
 
-🔵 Hacer la imagen circular
-Para que la imagen sea circular, usamos:
+🔵 Hacemos la imagen que sea circular. Para que la imagen sea circular, usamos:
 
 ```kotlin
-.clip(CircleShape)
+    .clip(CircleShape)
 ```
 
 El código completo de la imagen queda así:
@@ -676,11 +735,13 @@ El código completo de la imagen queda así:
     import androidx.compose.ui.draw.clip
 ```
 
-> ¿Y si la imagen no queda bien circular?
+<br/>
+
+> 👉 **¿Y si la imagen no queda bien circular?**
 
 Si usas otra imagen y ves que: No se ve completamente circular o se deforma. Es porque el ancho y el alto de la imagen no coinciden.
 
-👉 Para solucionarlo, usamos:
+Para solucionarlo, usamos:
 
 ```kotlin
     contentScale = ContentScale.Crop
@@ -707,7 +768,9 @@ Importación:
     import androidx.compose.ui.layout.ContentScale
 ```
 
-> **Para finalizar la fila, ajustamos el texto de la Row**
+<br/>
+
+> 👉 **Para finalizar la fila, ajustamos el texto de la Row**
 
 Ahora trabajamos el texto.
 
@@ -718,23 +781,21 @@ Usamos:
     textAlign = TextAlign.Center
 ```
 
-🎨 Estilizar el texto
-Para darle estilo usamos **TextStyle**, que no es un composable, sino una clase.
+🎨 Estilizamos el texto. Para darle estilo usamos **TextStyle**, que no es un composable, sino una clase.
 
 Con TextStyle podemos: Cambiar tamaño - Color - Negrita - Subrayado, etc.
 
 Ejemplo:
 
 ```kotlin
-
-Text(
-    text = "Bienvenido al mejor curso de Jetpack Compose",
-    textAlign = TextAlign.Center,
-    style = TextStyle(
-        fontSize = 18.sp,
-        color = Color.Magenta
+    Text(
+        text = "Bienvenido al mejor curso de Jetpack Compose",
+        textAlign = TextAlign.Center,
+        style = TextStyle(
+            fontSize = 18.sp,
+            color = Color.Magenta
+        )
     )
-)
 ```
 
 📦 Importaciones necesarias
@@ -750,7 +811,9 @@ Deberiamos obtener esta preview:
 
 ![Preview con imagen principal y row completa](img/img-16.png)
 
-> **Agregamos un texto debajo de la Row**
+<br/>
+
+> 👉 **Agregamos un texto debajo de la Row**
 
 Si seguimos bajando en el diseño, vemos que **debajo de la fila (Row)** aparece un texto adicional.
 
@@ -760,7 +823,7 @@ Este texto funciona como un **subtítulo o pequeño párrafo explicativo**, por 
 - No necesita estar centrado.
 - Tendrá un estilo diferente (itálica).
 
-> **Añadiendo el Text debajo de la Row**
+**Añadiendo el Text debajo de la Row**
 
 Justo después del `Row`, añadimos un `Text`:
 
@@ -798,15 +861,19 @@ Tenemos la siguiente Preview:
 
 ![Preview con el texto subtitulo puesto](img/img-17.png)
 
-> **Separando la Row del Text con Spacer**
+<br/>
 
-Al ver la Preview, notamos que: 👉 El Row y el Text están demasiado pegados.
+> 👉 **Separamos la Row del Text con Spacer**
+
+Al ver la Preview, notamos que: El Row y el Text están demasiado pegados.
 
 Para solucionar esto, usamos otro composable muy importante en Compose: **Spacer**.
 
 **Spacer** sirve para: Crear espacio entre componentes. Controlar separaciones sin usar márgenes (que no existen en Compose).
 
-> **Añadimos el Spacer**
+<br/>
+
+> 👉 **Añadimos el Spacer**
 
 Entre el Row y el Text, añadimos:
 
@@ -822,7 +889,7 @@ Entre el Row y el Text, añadimos:
     import androidx.compose.foundation.layout.Spacer
 ```
 
-> **Código de esta sección completo**
+**Código de esta sección completo**
 
 Así queda ahora esta parte dentro de la Column:
 
@@ -860,7 +927,9 @@ Así queda ahora esta parte dentro de la Column:
     )
 ```
 
-> **Lo siguiente es agregar un botón debajo del texto**
+<br/>
+
+> 👉 **Lo siguiente es agregar un botón debajo del texto**
 
 Ya casi terminamos. Si seguimos el diseño, vemos que **debajo del texto descriptivo** aparece un botón.
 
@@ -870,13 +939,15 @@ En Jetpack Compose tenemos varios tipos de botones:
 - `OutlinedButton` / `OutlinedIconButton` → botones con borde.
 - `TextButton` → un texto que actúa como botón (muy útil para enlaces).
 
-👉 En este ejercicio vamos a usar el **`Button` clásico**.
+En este ejercicio vamos a usar el **`Button` clásico**.
 
-> **¿Cómo funciona Button?**
+<br/>
+
+> 👉 **¿Cómo funciona Button?**
 
 Si miramos la documentación de `Button`, veremos algo muy interesante:
 
-👉 **`Button` acepta otros `@Composable` dentro de sus llaves**.
+- **`Button` acepta otros `@Composable` dentro de sus llaves**.
 
 Esto significa que:
 
@@ -888,19 +959,23 @@ Esto significa que:
 
 Esto nos da muchísima flexibilidad.
 
-> **Agregamos el botón básico con texto**
+<br/>
+
+> 👉 **Agregamos el botón básico con texto**
 
 El botón más simple sería así:
 
 ```kotlin
-Button(onClick = { }) {
-    Text(text = "Comenzar")
-}
+    Button(onClick = { }) {
+        Text(text = "Comenzar")
+    }
 ```
 
 Con esto ya tenemos un botón funcional con texto.
 
-> **Botón con icono + texto**
+<br/>
+
+> 👉 **Botón con icono + texto**
 
 Ahora pensemos un poco 🤔
 
@@ -935,9 +1010,11 @@ Aquí usamos:
     import androidx.compose.material.icons.filled.Favorite
 ```
 
-> **Separmos el icono del texto con Spacer**
+<br/>
 
-Si miramos la Preview, veremos que: 👉 El icono y el texto están demasiado pegados.
+> 👉 **Separamos el icono del texto con Spacer**
+
+Si miramos la Preview, veremos que: El icono y el texto están demasiado pegados.
 
 Solución: usar un **Spacer con ancho**.
 
@@ -966,11 +1043,13 @@ Nuestra Preview se vería asi:
 
 ![Preview con boton con icono + texto](img/img-20.png)
 
-> **Importante: Button ya trabaja como una Row**
+<br/>
+
+> 👉 **Importante: Button ya trabaja como una Row**
 
 Aquí viene un detalle muy importante de Compose 👀
 
-👉 **Button** internamente ya se comporta como una **Row**.
+- **Button** internamente ya se comporta como una **Row**.
 
 Esto significa que:
 
@@ -995,7 +1074,7 @@ Por lo tanto, podemos simplificar el botón eliminando la Row:
 
 Mucho más limpio ✅
 
-> **¿Y si quiero el icono encima del texto?**
+**¿Y si quiero el icono encima del texto?**
 
 En ese caso sí tendría sentido usar una Column dentro del botón:
 
@@ -1011,17 +1090,19 @@ En ese caso sí tendría sentido usar una Column dentro del botón:
     }
 ```
 
-👉 Todo es cuestión de jugar con los contenedores.
+Todo es cuestión de jugar con los contenedores.
 
-> **Centremos el botón en la pantalla**
+<br/>
 
-Si añadimos el botón tal cual dentro de la Column principal, veremos que: 👉 Se alinea a la izquierda por defecto.
+> 👉 **Centremos el botón en la pantalla**
+
+Si añadimos el botón tal cual dentro de la Column principal, veremos que: Se alinea a la izquierda por defecto.
 
 Queremos que el botón esté centrado horizontalmente.
 
 Una solución muy clara es: Meter el Button dentro de un Box. Hacer que el Box ocupe todo el ancho y centrar su contenido.
 
-> **Box para centrar el Button**
+**Box para centrar el Button**
 
 ```kotlin
     Box(
@@ -1041,7 +1122,9 @@ Una solución muy clara es: Meter el Button dentro de un Box. Hacer que el Box o
     }
 ```
 
-> **Ahora cambiamos el color de un Button**
+<br/>
+
+> 👉 **Ahora cambiamos el color de un Button**
 
 En Jetpack Compose, el botón clásico (Button) acepta un parámetro llamado **colors**, que nos permite definir los colores del botón.
 
@@ -1085,18 +1168,23 @@ La preview se ve asi:
 
 ![Preview con boton con icono + texto](img/img-21.png)
 
-> **Continuamos con una fila con línea + texto + línea**
+<br/>
+
+> 👉 **Continuamos con una fila con línea + texto + línea**
 
 Si seguimos el diseño, ahora nos encontramos con una sección muy típica en muchas apps:
 
-👉 **una línea, un texto en el centro y otra línea**  
+**una línea, un texto en el centro y otra línea**
+
 Algo como:
 
-——— Encuéntranos en las Redes Sociales ———
+- ——— Encuéntranos en las Redes Sociales ———
 
 Para esto, claramente necesitamos otro **Row**, ya que los elementos van en horizontal.
 
-> **Creamos una Row**
+<br/>
+
+> 👉 **Creamos una Row**
 
 Debajo del botón anterior, añadimos un `Row`:
 
@@ -1114,7 +1202,9 @@ Como siempre, si **Row** se pone en rojo, recuerda importar:
 
 (Lo recalco mucho porque es un hábito muy importante cuando empiezas).
 
-> **Aquí usamos Divider para crear la línea**
+<br/>
+
+> 👉 **Aquí usamos Divider para crear la línea**
 
 Jetpack Compose tiene un composable llamado **Divider**, que sirve para crear líneas separadoras.
 
@@ -1140,7 +1230,7 @@ El código queda así:
     )
 ```
 
-> **Añadiendo el texto entre las líneas**
+**Añadiendo el texto entre las líneas**
 
 Ahora añadimos el texto en color azul que irá en medio:
 
@@ -1152,7 +1242,8 @@ Text(
 ```
 
 Separando el texto de las líneas con padding. Si miramos la Preview, veremos que:
-👉 Las líneas están demasiado pegadas al texto.
+
+Las líneas están demasiado pegadas al texto.
 
 Solución: añadir padding al Text.
 
@@ -1196,7 +1287,9 @@ Visualmente ya tenemos: ✅ Línea ✅ Texto ✅ Línea
 
 Pero todavía no está bien alineado.
 
-> **Corrigimos alineaciones en la Row**
+<br/>
+
+> 👉 **Corrigimos alineaciones en la Row**
 
 Problemas que vemos: El texto no está perfectamente alineado con las líneas y todo el conjunto no está centrado en la pantalla.
 
@@ -1239,18 +1332,19 @@ Resultado de la preview:
 
 ![Preview con la row linea texto linea alineados](img/img-23.png)
 
-> Para finalizar el ejercicio ponemos los dos botones de las redes sociales: Facebook e Instagram.
+<br/>
+
+> 👉 **Para finalizar el ejercicio ponemos los dos botones de las redes sociales: Facebook e Instagram.**
 
 Tienen ambos botones fondo blanco. Facebook tiene color azul y borde azul. Instagram tiene color rojo y borde rojo.
 
-Además:
-👉 Ambos botones deben ser más anchos que el botón “Comenzar”.
+Además: Ambos botones deben ser más anchos que el botón “Comenzar”.
 
 **¿Qué tipo de botón usamos?**
 
 Aquí NO nos conviene usar Button, porque: Button tiene fondo sólido por defecto. Cambiar borde + fondo blanco es más complicado.
 
-👉 El botón perfecto aquí es **OutlinedButton**.
+- El botón perfecto aquí es **OutlinedButton**.
 
 **¿Por qué OutlinedButton?**
 
@@ -1264,7 +1358,9 @@ Aquí vamos a usar un ancho fijo, por ejemplo:
     Modifier.width(260.dp)
 ```
 
-> **Botón de Facebook**
+<br/>
+
+> 👉 **Botón de Facebook**
 
 Código del botón Facebook
 
@@ -1297,7 +1393,9 @@ Código del botón Facebook
     import androidx.compose.foundation.BorderStroke
 ```
 
-> **Separar los botones con Spacer**
+<br/>
+
+> 👉 **Separar los botones con Spacer**
 
 Como los botones van uno debajo del otro, necesitamos espacio entre ellos:
 
@@ -1305,7 +1403,9 @@ Como los botones van uno debajo del otro, necesitamos espacio entre ellos:
     Spacer(modifier = Modifier.height(10.dp))
 ```
 
-> **Botón de Instagram**
+<br/>
+
+> 👉 **Botón de Instagram**
 
 El de Instagram es exactamente igual, solo cambiamos el color:
 
@@ -1327,11 +1427,15 @@ Nuestra preview es esta:
 
 ![Preview con la row linea texto linea alineados](img/img-24.png)
 
-> **Para finalizar el ejercicio centramos los dos botones**
+<br/>
 
-Igual que hicimos antes, queremos: 👉 Botones centrados horizontalmente.
+> 👉 **Para finalizar el ejercicio centramos los dos botones**
 
-¿Los metemos dentro de un Box o usamos la Column?. Si usamos un Box los botones se superponen uno encima del otro. Por eso mismo mejor usar una Column, donde cada elemento va uno debajo del otro.
+Igual que hicimos antes, queremos que los botones estén centrados horizontalmente.
+
+**¿Metemos los botones dentro de un contenedor Box o usamos el contenedor Column?.**
+
+Si usamos un **Box** los botones se superponen uno encima del otro. Por eso mismo mejor usar una **Column**, donde cada elemento va uno debajo del otro.
 
 ```kotlin
     Column(
