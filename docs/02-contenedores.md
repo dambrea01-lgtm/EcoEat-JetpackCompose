@@ -1217,17 +1217,33 @@ Lo pones entre botón y botón. Y ya está. Nos crea un espacio.
 
 ## [9. 📋 Ejercicios Propuestos](#-índice--capítulo-2-contenedores-en-jetpack-compose)
 
-- **Ejercicio 1:** Crea un preview que muestre algo similar a la siguiente imagen
+- Estos ejercicio es muy muy muy importante que los hagas, una vez hechos sabras muy bien dominar la anidación y funcionamiento de los contenedores en JetPack Compose. Es clave saber manejar estos conceptos de Box, Row y Column, además de saber anidarlos y darle formas.
+
+- **Ejercicio 1:** Crea un preview básoca que muestre algo similar a la siguiente imagen
 
 <br/>
 
-![agregando Spacer](assets/capitulo-02/img-68.png)
+![ejercicio previews cuadrantes](assets/capitulo-02/img-68.png)
 
 <br/>
 
 > [Ver solución del ejercicio 1: explicado paso a paso](../ejercicios/tema-02/ejercicio-01.md)
 
 > [Ir directamente al código del ejercicio resuelto](../src/tema-02/ejercicio-01/MainActivity.kt)
+
+<br/>
+
+- **Ejercicio 2:** Crea un preview avanzada que muestre algo similar a la siguiente imagen que contiene varios contenedores anidados.
+
+<br/>
+
+![ejercicio preview contenedores anidados](../ejercicios/tema-02/img/img-25.png)
+
+<br/>
+
+> [Ver solución del ejercicio 1: explicado paso a paso](../ejercicios/tema-02/ejercicio-02.md)
+
+> [Ir directamente al código del ejercicio resuelto](../src/tema-02/ejercicio-02/MainActivity.kt)
 
 <br/><hr/><br/>
 

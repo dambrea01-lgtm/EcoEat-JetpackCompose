@@ -1,11 +1,12 @@
 # Ejercicio 1: Practicando con contenedores
 
-| [↩️ Volver al inicio del Proyecto](../../README.md) | [↩️ Volver al Capítulo 2](../../docs/02-contenedores.md) |
-| :-------------------------------------------------: | :------------------------------------------------------: |
+| [➡️ Ir al ejercicio 2](../tema-02/ejercicio-02.md) | [↩️ Volver al inicio del Proyecto](../../README.md) | [↩️ Volver al Capítulo 2](../../docs/02-contenedores.md) |
+| :------------------------------------------------: | :-------------------------------------------------: | -------------------------------------------------------- |
+
 
 <br/><hr/><br/>
 
-**Ejercicio 1:** Crea un preview que muestre algo similar a la siguiente imagen
+**Ejercicio 1:** Crea una preview que muestre algo similar a la siguiente imagen
 
 <br/>
 
@@ -14,6 +15,14 @@
 <br/>
 
 **Solución:**
+
+<br/>
+
+> [Ver código de la solución del ejercicio](../../src/tema-02/ejercicio-01/MainActivity.kt)
+
+<br/>
+
+> **Explicacion Paso a paso:**
 
 Como es el primer ejercicio vamos ir paso a paso, para que vayamos conociendo poco a poco como funciona Jetpack Compose. Por lo tanto, creamos un nuevo proyecto en Android Studio con la plantilla **Empty Compose Activity** le pones un nombre, en mi caso pondre Box001.
 
@@ -575,5 +584,5 @@ Ahora cada cuadrante tiene un párrafo explicativo centrado (**textAlign = TextA
 
 <br/><hr/><br/>
 
-| [⬆️ Ir al inicio del ejercicio](#ejercicio-1-practicando-con-contenedores) | [↩️ Volver al inicio del Proyecto](../../README.md) | [↩️ Volver al Capítulo 2](../../docs/02-contenedores.md) |
-| :------------------------------------------------------------------------: | :-------------------------------------------------: | :------------------------------------------------------: |
+| [➡️ Ir al ejercicio 2](../tema-02/ejercicio-02.md) | [⬆️ Ir al inicio del ejercicio](#ejercicio-1-practicando-con-contenedores) | [↩️ Volver al inicio del Proyecto](../../README.md) | [↩️ Volver al Capítulo 2](../../docs/02-contenedores.md) |
+| :------------------------------------------------: | :------------------------------------------------------------------------: | :-------------------------------------------------: | -------------------------------------------------------- |
